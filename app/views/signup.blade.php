@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-<title>Sign Up with us Today!</title>
+<title>Cinemaphile | Sign Up</title>
 @stop
 
 @section('content')
