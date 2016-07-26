@@ -11,5 +11,5 @@ modules:
       Laravel4:
         cleanup: true
     coverage:
-      remote:
-        true
+      remote: true
+      
