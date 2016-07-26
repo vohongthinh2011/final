@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-	<title>Facebook | Login Page</title>
+	<title>Cinema | Login Page</title>
 @stop
 
 @section('content')
