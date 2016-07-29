@@ -1,0 +1,52 @@
+body {
+  padding-top: 250px;
+  background-color: grey;
+}
+
+.container{
+    position: relative;
+    border-collapse: separate;
+    width: 400px;
+	margin: 16px auto;
+	font-size: 16px;
+	box-sizing: border-box;
+	display: block;
+	padding: 12px;
+}
+
+.login-triangle{
+	width: 0;
+	margin-right: auto;
+	margin-left: auto;
+	border: 12px solid transparent;
+	border-bottom-color: #28d;
+}
+
+.form-group{
+	width: 400px;
+}
+
+.login-userName{
+	width: 360px;
+	margin: 16px auto;
+	font-size: 16px;
+}
+
+.login-password{
+	width: 360px;
+	margin: 16px auto;
+	font-size: 16px;
+}
+
+.submitButton{
+	width: 360px;
+	margin: 16px auto;
+	font-size: 16px;
+}
+
+.signUpNewAcc{
+	width: 360px;
+	margin: 16px auto;
+	font-size: 16px;
+}
+
