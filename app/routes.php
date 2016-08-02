@@ -30,3 +30,6 @@ Route::get('/feed', function() {
 
 Route::get('/login', 'AuthenticationController@showLoginView');
 Route::post('/login', 'AuthenticationController@loginUser');
+
+Route::get('/search', 'SearchController@showSearchView');
+Route::post('/search', 'SearchController@SearchMovieID');
