@@ -23,14 +23,14 @@
 	      <li><a href="#">Movies</a></li>
 	      <li><a href="#">TV</a></li>
 	    </ul>
-	    <form class="navbar-form navbar-right" role="search">
+	    <form class="navbar-form navbar-left" role="search">
 	  		<div class="form-group">
 	    		<input type="text" class="form-control" placeholder="Search">
 	  		</div>
 	  		<button type="submit" class="btn btn-default">Submit</button>
 		</form>
 		<!--sign in button-->
-		<button type="button" class="btn btn-default navbar-btn navbar-right">Sign in</button>
+		<button type="button" class="btn btn-default navbar-btn navbar-left">Sign in</button>
 	  </div>
 
 	  
