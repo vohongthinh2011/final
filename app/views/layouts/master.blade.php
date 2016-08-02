@@ -11,9 +11,36 @@
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<div class="container-fluid">
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#">Cinemaphile</a>
+	    </div>
+	    <ul class="nav navbar-nav">
+	      <li class="active"><a href="#">Home</a></li>
+	      <li><a href="#">Movies</a></li>
+	      <li><a href="#">TV</a></li>
+	    </ul>
+	    <form class="navbar-form navbar-right" role="search">
+	  		<div class="form-group">
+	    		<input type="text" class="form-control" placeholder="Search">
+	  		</div>
+	  		<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+		<!--sign in button-->
+		<button type="button" class="btn btn-default navbar-btn navbar-right">Sign in</button>
+	  </div>
+
+	  
+	</nav>
+</div>
+
   @yield('style')
 </head>
 <body>
   @yield('content')
+
 </body>
 </html>

@@ -11,7 +11,6 @@
 
 @section('content')
 	<div class="container">
-
 		<div class="login-triangle"></div>
 		<div>
 			<h1 align="center">Log in</h1>

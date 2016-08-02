@@ -9,31 +9,6 @@
 @stop
 
 @section('content')
-<div class="container-fluid">
-	<nav class="navbar navbar-default">
-	  <div class="container-fluid">
-	    <div class="navbar-header">
-	      <a class="navbar-brand" href="#">Cinemaphile</a>
-	    </div>
-	    <ul class="nav navbar-nav">
-	      <li class="active"><a href="#">Home</a></li>
-	      <li><a href="#">Movies</a></li>
-	      <li><a href="#">TV</a></li>
-	    </ul>
-	    <form class="navbar-form navbar-left" role="search">
-	  		<div class="form-group">
-	    		<input type="text" class="form-control" placeholder="Search">
-	  		</div>
-	  		<button type="submit" class="btn btn-default">Submit</button>
-		</form>
-		<!--sign in buttom-->
-		<button type="button" class="btn btn-default navbar-btn navbar-left">Sign in</button>
-	  </div>
-
-	  
-	</nav>
-</div>
-
 <div class="container">
 	<h1 align="center">Sign Up</h1>
 	<p align="center">Sign up an new account free and join our community!</p>
