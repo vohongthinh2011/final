@@ -8,7 +8,7 @@ return [
     /*
      * Api key
      */
-    'api_key' => '',
+    'api_key' => '28e78f96c6208c039ef02862f0b3bcdf',
 
     /**
      * Client options
@@ -17,7 +17,7 @@ return [
         /**
          * Use https
          */
-        'secure' => true,
+        'secure' => false,
 
         /*
          * Cache
