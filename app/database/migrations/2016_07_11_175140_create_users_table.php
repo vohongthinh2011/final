@@ -27,7 +27,11 @@ class CreateUsersTable extends Migration {
 			$table->enum('gender', ['male', 'female']);
 			$table->string('verification_question', 255);
 			$table->string('verifiation_answer', 255);
+<<<<<<< HEAD
+			$table->rememberToken();
+=======
 			$table->remember_token();
+>>>>>>> 20b9ecc682ebf8ca600ec69d7f8009ad2cdeaccc
 			$table->timestamps();
 			
 
