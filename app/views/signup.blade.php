@@ -10,7 +10,7 @@
 
 @section('content')
 <div class="container">
-	<h1 align="center">Sign Up</h1>
+	<h1 align="center">Sign Up Form</h1>
 	<p align="center">Sign up an new account free and join our community!</p>
 
 	{{ Form::open(['action'=> 'RegistrationController@signUp', 'method' => 'POST']) }}
