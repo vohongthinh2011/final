@@ -1,0 +1,44 @@
+.container{
+	position: relative;
+    border-collapse: separate;
+	width: 500px;
+	margin: 16px auto;
+	font-size: 16px;
+	box-sizing: border-box;
+	display: block;
+	padding: 12px;
+}
+
+.form-group{
+	width: 500px;
+}
+
+.fullName{
+	width: 500px;
+	margin: 16px auto;
+	font-size: 16px;
+}
+
+.userName{
+	width: 500px;
+	margin: 16px auto;
+	font-size: 16px;
+}
+
+.email{
+	width: 500px;
+	margin: 16px auto;
+	font-size: 16px;
+}
+
+.password{
+	width: 500px;
+	margin: 16px auto;
+	font-size: 16px;
+}
+
+.repassword{
+	width: 500px;
+	margin: 16px auto;
+	font-size: 16px;
+}
