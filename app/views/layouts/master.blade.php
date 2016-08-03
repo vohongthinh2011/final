@@ -25,15 +25,21 @@
 	    </ul>
 	    <form class="navbar-form navbar-left" role="search">
 	  		<div class="form-group">
-	    		<input type="text" class="form-control" placeholder="Search">
+	    	<!--	<input type="text" class="form-control" placeholder="Search"> -->
+        {{ Form::open(['action'=> 'SearchController@SearchMovieID', 'method' => 'POST']) }}
+
+      		{{ Form::text('input', null, [ 'placeholder' => 'Movie ID', 'required']) }}
+
+      		{{ Form:: submit('Search') }}
+
+      		{{ Form::close() }}
 	  		</div>
-	  		<button type="submit" class="btn btn-default">Submit</button>
 		</form>
 		<!--sign in button-->
 		<button type="button" class="btn btn-default navbar-btn navbar-left">Sign in</button>
 	  </div>
 
-	  
+
 	</nav>
 </div>
 
