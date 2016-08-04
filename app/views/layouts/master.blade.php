@@ -16,32 +16,34 @@
 	<nav class="navbar navbar-default">
 	  <div class="container-fluid">
 	    <div class="navbar-header">
-	      <a class="navbar-brand" href="#">Cinemaphile</a>
+	      <a class="navbar-brand" href="home">Cinemaphile</a>
 	    </div>
 	    <ul class="nav navbar-nav">
-	      <li class="active"><a href="#">Home</a></li>
-	      <li><a href="#">Movies</a></li>
-	      <li><a href="#">TV</a></li>
+	      <li class="active"><a href="home">Home</a></li>
+	      <li><a href="movies">Movies</a></li>
+	      <li><a href="tv">TV</a></li>
 	    </ul>
-	    <form class="navbar-form navbar-left" role="search">
+	    <button type="button" class="btn btn-default navbar-btn navbar-right"><a href="signup">Sign Up</a></button>
+	    <!--sign in button-->
+		<button type="button" class="btn btn-default navbar-btn navbar-right"><a href="login">Login</a></button>
+	    <form class="navbar-form navbar-right" role="search">
 	  		<div class="form-group">
-	    	<!--	<input type="text" class="form-control" placeholder="Search"> -->
-        {{ Form::open(['action'=> 'SearchController@SearchMovieID', 'method' => 'POST']) }}
+	    		<!--<input type="text" class="form-control" placeholder="Movie ID">-->
+	    		{{ Form::open(['action'=> 'SearchController@SearchMovieID', 'method' => 'POST']) }}
 
-      		{{ Form::text('input', null, [ 'placeholder' => 'Movie ID', 'required']) }}
+			{{ Form::text('input', null, [ 'placeholder' => 'Movie ID', 'required']) }}
 
-      		{{ Form:: submit('Search') }}
+			{{ Form:: submit('Sign Up') }}
 
-      		{{ Form::close() }}
+			{{ Form::close() }}
+	    		<a href="/search" class="btn btn-link">Search</a>
 	  		</div>
 		</form>
-		<!--sign in button-->
-		<button type="button" class="btn btn-default navbar-btn navbar-left">Sign in</button>
 	  </div>
 
 
 	</nav>
-</div>
+	</div>
 
   @yield('style')
 </head>

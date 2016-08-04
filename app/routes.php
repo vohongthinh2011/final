@@ -12,6 +12,8 @@
 */
 
 Route::get('/', 'HomeController@showWelcome');
+Route::get('/home', 'HomeController@showWelcome');
+Route::get('/hello', 'HomeController@showWelcome');
 
 
 Route::get('/signup', 'RegistrationController@showSignUpView');
@@ -26,3 +28,4 @@ Route::post('/login', 'AuthenticationController@loginUser');
 
 Route::get('/search', 'SearchController@showSearchView');
 Route::post('/search', 'SearchController@SearchMovieID');
+
