@@ -15,7 +15,7 @@ class SearchController extends \BaseController {
 		$input = Input::get('input');
 
 		// Makes the JSON output into an array
-		$search_result = json_encode(Tmdb::getSearchApi()->searchMoviess($input));
+		$search_result = json_encode(Tmdb::getSearchApi()->searchMovies($input));
 
 
 
