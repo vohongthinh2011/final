@@ -8,7 +8,8 @@
 		"vlucas/phpdotenv": "~2.0",
 		"php-tmdb/api" : "~2.0",
 		"php-tmdb/laravel": "~1.0",
-		"codeception/codeception": "2.1"
+		"codeception/codeception": "2.1",
+		"intervention/image": "^2.3"
 		
 	},
 	"autoload": {

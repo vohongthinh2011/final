@@ -15,7 +15,8 @@
 MOVIE LIST:<br><br><br>
 @for($i = 0; $i < $count; $i++)
     
-    Pictures: {{$movie_results[$i]['poster_path'] . "\t" . $movie_results[$i]['backdrop_path']}}<br>
+    {{HTML::image('https://image.tmdb.org/t/p/w185'.$movie_results[$i]['poster_path'])}} <br><br> 
+    {{HTML::image('https://image.tmdb.org/t/p/w185'.$movie_results[$i]['backdrop_path'])}}<br>
     Title: {{$movie_results[$i]['original_title']}}<br>
     Release date: {{$movie_results[$i]['release_date']}}<br>
     Movie ID: {{$movie_results[$i]['id']}}<br>
