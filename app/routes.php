@@ -27,3 +27,6 @@ Route::post('/login', 'AuthenticationController@loginUser');
 
 Route::get('/search', 'SearchController@showSearchView');
 Route::post('/search', 'SearchController@SearchMovieID');
+
+//review
+Route::post('/search', 'SearchController@postReview');
