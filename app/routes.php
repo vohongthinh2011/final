@@ -29,4 +29,9 @@ Route::get('/search', 'SearchController@showSearchView');
 Route::post('/search', 'SearchController@SearchMovieID');
 
 //review
-Route::post('/search', 'SearchController@postReview');
+Route::post('/search', 'ReviewController@postReview');
+
+//reactions
+Route::post('/feed', 'ReactionController@postReaction');
+
+

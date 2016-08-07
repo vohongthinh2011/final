@@ -1,13 +1,8 @@
 <?php
 
-use Illuminate\Auth\UserTrait;
-use Illuminate\Auth\UserInterface;
-use Illuminate\Auth\Reminders\RemindableTrait;
-use Illuminate\Auth\Reminders\RemindableInterface;
 
-class Reaction extends Eloquent implements UserInterface, RemindableInterface {
+class Reaction extends Eloquent {
 
-	use UserTrait, RemindableTrait;
 
 	/**
 	 * The database table used by the model.

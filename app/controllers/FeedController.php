@@ -11,12 +11,12 @@ class FeedController extends \BaseController {
 		$user = Auth::user();
 
 		// How can we loop through using the friends table???
-		$reviews = Review::where('UID', '=', $user->id)->get();
+		$reviews = Review::where('user_id', '=', $user->id)->get();
 
 		$reactions = [];
 
 		foreach($reviews as $review){
-			$reactions[$review->id] = Reaciton::where('RID', '=', $review->id)->get();
+			$reactions[$review->id] = Reaction::where('review_id', '=', $review->id)->get();
 		}
 
 		return View::make('feed', [
