@@ -1,0 +1,22 @@
+Structure
+
+$search_results = array(page, results, total pages, total results)
+   results = array[number_of_results]
+        each of the results is an associative array containing
+        (key => value):
+        'original_title' => title of movie
+        'release_date' => release date of movie
+        'id' => movie id 
+        'poster_path' => Picture of movie (jpg)
+        'backdrop_path' => Different picture of movie (jpg)
+        'original_language' => Language of movie (en)
+        'adult' => boolean value (true if porn, false if not)
+        'genre_ids' => array of numbers representing different genres 
+        'overview' => brief description of movie 
+        
+        'popularity' => popularity ratings (double value)
+        'vote_count' => number of votes 
+        'vote_average' => voting average score (double value)
+        
+        
+        

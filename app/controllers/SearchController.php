@@ -14,12 +14,18 @@ class SearchController extends \BaseController {
 			]);
 		$input = Input::get('input');
 
-		// Makes the JSON output into an array
-		$search_result = json_encode(Tmdb::getSearchApi()->searchMovies($input));
-
-
-
-		return View::make('search_result')->with('data', $search_result);
-	}
-
+        $search_result = Tmdb::getSearchApi()->searchMovies($input);
+        
+     
+        //get movie details for all movies matching search input
+        $search_details = $search_result['results'];
+        //get total number of movie results 
+        $num_of_results = count($search_details);
+        
+        return View::make('search_result', ['count' => $num_of_results,
+                                            'movie_results' => $search_details,
+                                             ]);
+	
+	
+    }
 }

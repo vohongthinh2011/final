@@ -7,7 +7,8 @@
 		"laravel/framework": "4.2.*",
 		"vlucas/phpdotenv": "~2.0",
 		"php-tmdb/api" : "~2.0",
-		"php-tmdb/laravel": "~1.0"
+		"php-tmdb/laravel": "~1.0",
+		"codeception/codeception": "2.1"
 		
 	},
 	"autoload": {
