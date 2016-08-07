@@ -5,12 +5,14 @@
 @stop
 
 @section('style')
-<link rel="stylesheet" type="text/css" href="/css/signup.css">
+<link rel="stylesheet" type="text/css" href="/css/searchresult.css">
 @stop
 
 @section('content')
 
-MOVIE DETAILS:<br><br><br>
+<div class="col-xs-4 col-sm-3" id="left">
+    <p>
+MOVIE LIST:<br><br><br>
 @for($i = 0; $i < $count; $i++)
     
     Pictures: {{$movie_results[$i]['poster_path'] . "\t" . $movie_results[$i]['backdrop_path']}}<br>
@@ -39,7 +41,15 @@ MOVIE DETAILS:<br><br><br>
     Average Rating per Vote: <br>
     Rating relative to genre: <br>
     <br><br>
-    
+
 @endfor 
 
+    </p>
+</div>
+<div class="col-xs-10 col-sm-6" id="center">
+    <p>MOVIE TO RATE</p>
+</div>
+<div class="col-xs-4 col-sm-3" id="right">
+    <p>RECOMMENDED FOR YOU</p>
+</div>
 @stop
