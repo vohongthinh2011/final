@@ -26,15 +26,7 @@ class CreateUsersTable extends Migration {
 			$table->integer('number_of_friends');
 			$table->enum('gender', ['male', 'female']);
 			$table->string('verification_question', 255);
-			$table->string('verifiation_answer', 255);
-/*<<<<<<< Updated upstream
-
-			$table->rememberToken();
-
-
-=======
-			//$table->rememberToken();
->>>>>>> Stashed changes*/
+			$table->string('verification_answer', 255);
 			$table->rememberToken();
 			$table->timestamps();
 

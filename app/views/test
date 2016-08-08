@@ -1,0 +1,41 @@
+    @if($count > 0)
+        <div class="panel panel-default">
+            <div class="panel-heading">SEARCH RESULTS</div>
+            
+            
+                @for($i = 0; $i < $count; $i++)
+                <div class="panel panel-default">
+                    <div class="panel-heading">{{$movie_results[$i]['original_title']}}
+                    <tr>{{HTML::image('https://image.tmdb.org/t/p/w185'.$movie_results[$i]['poster_path'])}}</tr> 
+            <tr>{{HTML::image('https://image.tmdb.org/t/p/w185'.$movie_results[$i]['backdrop_path'])}}</tr>
+            <tr>Title: {{$movie_results[$i]['original_title']}}</tr>
+            <tr>Release date: {{$movie_results[$i]['release_date']}}</tr>
+            <tr>Movie ID: {{$movie_results[$i]['id']}}</tr>
+            <tr>Language: {{$movie_results[$i]['original_language']}}</tr>
+            <tr>Adult: {{$movie_results[$i]['adult']}}</tr>
+            @if(gettype($movie_results[$i]['genre_ids']) == "array")
+                <tr>Genre: 
+                @foreach($movie_results[$i]['genre_ids'] as $genre_id)
+                    {{$genre_id}}    
+                @endforeach  
+                </tr>
+            @endif 
+            <tr>Movie Description: {{$movie_results[$i]['overview']}}</tr>
+            <tr role="separator" class="divider"></tr>
+            <tr>RATINGS(TMDB):</tr>
+            <tr>Popularity: {{$movie_results[$i]['popularity']}}</tr>
+            <tr>Number of Votes: {{$movie_results[$i]['vote_count']}}</tr>
+            <tr>Average Rating per Vote: {{$movie_results[$i]['vote_average']}}</tr>
+            <tr role="separator" class="divider"></tr>
+            <tr>RATINGS(CINEMAPHILE):</tr>
+            <tr>Number of Votes: </tr>
+            <tr>Average Rating per Vote: </tr>
+            <tr>Rating relative to genre: </tr>
+            <tr role="separator" class="divider"></tr>
+            <tr role="separator" class="divider"></tr>
+            </table>
+        @endfor
+         
+        </div>
+    @endif 
+    </p>

@@ -31,6 +31,7 @@ class CreateFriendsTable extends Migration {
 	public function down()
 	{
 		//
+        Schema::drop('friends');
 	}
 
 }

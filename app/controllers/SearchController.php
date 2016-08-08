@@ -5,7 +5,7 @@ use Tmdb\Laravel\Facades\Tmdb;
 class SearchController extends \BaseController {
 
 	function showSearchView() {
-		return View::make('search');
+		return View::make('search', ['count' => 0]);
 	}
 
 	function SearchMovieID() {
@@ -22,7 +22,7 @@ class SearchController extends \BaseController {
         //get total number of movie results 
         $num_of_results = count($search_details);
         
-        return View::make('search_result', ['count' => $num_of_results,
+        return View::make('search', ['count' => $num_of_results,
                                             'movie_results' => $search_details,
                                              ]);
 	

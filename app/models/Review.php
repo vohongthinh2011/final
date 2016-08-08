@@ -1,6 +1,6 @@
 <?php
 
-class Comment extends Eloquent{
+class Review extends Eloquent{
 
 
 

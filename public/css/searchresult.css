@@ -1,22 +1,45 @@
 body, html {
-  margin: 0;
+  
   overflow: hidden;
   height:100%;
+  background-color: black;
+
 }
 
-#left {
-	background-color: white
-}
 
-#right {
-	background-color: white
-}
-
-#center {
-    background-color: gray
-}
-
-#left, #center, #right{
+.multi-vertical-scroll{
   height:100%;
   overflow-y: scroll; 
+  background-color: lightgrey;
+  padding-top: 10px;
+
+  
 }
+
+.panel-content{
+    padding: 10px;
+}
+
+.panel > .panel-heading{
+    background-image: none;
+    background-color: dimgray;
+    color: white;
+}
+
+.panel{
+    border-color: dimgray
+}
+
+.centering-image{
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.line-break{
+    border-width: 5px;
+    border-color: darkgrey;
+}
+
+
+

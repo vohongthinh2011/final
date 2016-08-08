@@ -11,16 +11,11 @@
 |
 */
 
-Route::get('/', 'HomeController@showWelcome');
-Route::get('/home','HomeController@showWelcome');
-
 
 Route::get('/signup', 'RegistrationController@showSignUpView');
 Route::post('/signup', 'RegistrationController@signUp');
 
-Route::get('/feed', function() {
-	return View::make('feed');
-});
+Route::get('/feed', 'FeedController@showFeed');
 
 Route::get('/login', 'AuthenticationController@showLoginView');
 Route::post('/login', 'AuthenticationController@loginUser');
@@ -33,5 +28,9 @@ Route::post('/review', 'ReviewController@postReview');
 
 //reactions
 Route::post('/reaction', 'ReactionController@postReaction');
+
+//friends 
+Route::get('/friends', 'FriendController@showFriendPage');
+Route::post('/friends', 'FriendController@addFriend');
 
 

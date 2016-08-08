@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.nav_master')
 
 @section('title')
 	<title>My Feed Page</title>

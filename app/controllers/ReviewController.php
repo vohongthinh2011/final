@@ -2,6 +2,13 @@
 
 class ReviewController extends \BaseController {
     
+    
+    public function showReview(){
+        
+        
+    }
+    
+    
     public function postReview(){
         
         $validation = Validator::make(Input::all(),[
