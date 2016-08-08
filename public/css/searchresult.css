@@ -12,8 +12,9 @@ body, html {
   overflow-y: scroll; 
   background-color: lightgrey;
   padding-top: 10px;
+  padding-bottom: 70px;
 
-  
+
 }
 
 .panel-content{
@@ -41,5 +42,8 @@ body, html {
     border-color: darkgrey;
 }
 
-
+.review-box{
+    border-color: dimgrey;
+    border-width: 5px;
+}
 

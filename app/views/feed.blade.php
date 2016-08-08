@@ -11,5 +11,8 @@
 @section('content')
 <div class="container-fluid">
 	<h1>My Feed Page</h1>
+    @foreach($reviews as $review)
+        <p>{{$user->full_name}} posted a review on {{$review->created_at}} about {{$review->movie_title}}</p>
+    @endforeach
 </div>
 @stop
