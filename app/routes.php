@@ -19,6 +19,7 @@ Route::get('/feed', 'FeedController@showFeed');
 
 Route::get('/login', 'AuthenticationController@showLoginView');
 Route::post('/login', 'AuthenticationController@loginUser');
+Route::get('/logout', 'AuthenticationController@logout');
 
 Route::get('/search', 'SearchController@showSearchView');
 Route::post('/search', 'SearchController@SearchMovieID');
@@ -33,4 +34,7 @@ Route::post('/reaction', 'ReactionController@postReaction');
 Route::get('/friends', 'FriendController@showFriendPage');
 Route::post('/friends', 'FriendController@addFriend');
 
-
+//profile
+Route::get('/profile', 'ProfileController@showProfile');
+Route::post('/profile', 'ProfileController@editProfile');
+Route::post('/profile', 'ProfileController@addImage');

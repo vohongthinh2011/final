@@ -1,3 +1,7 @@
+body{
+    background-color: lightgrey;
+}
+
 .container{
 	position: relative;
     border-collapse: separate;
@@ -12,6 +16,7 @@
 .form-group{
 	width: 500px;
 }
+
 
 .fullName{
 	width: 500px;
@@ -39,6 +44,12 @@
 
 .repassword{
 	width: 500px;
+	margin: 16px auto;
+	font-size: 16px;
+}
+
+.signup-input-bar{
+    width: 500px;
 	margin: 16px auto;
 	font-size: 16px;
 }

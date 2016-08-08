@@ -9,10 +9,12 @@
 @stop
 
 @section('content')
-<div class="container-fluid">
-	<h1>My Feed Page</h1>
-    @foreach($reviews as $review)
-        <p>{{$user->full_name}} posted a review on {{$review->created_at}} about {{$review->movie_title}}</p>
-    @endforeach
-</div>
+
+
+              @foreach($reviews as $review)
+                  <p>{{$user->full_name}} posted a review on {{$review->updated_at}} about {{$review->movie_title}}</p>
+                  <blockquote>{{$review->content}}</blockquote>
+            @endforeach 
+
+
 @stop

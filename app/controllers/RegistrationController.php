@@ -17,7 +17,14 @@ class RegistrationController extends \BaseController {
   			'password' => 'required',
   			'repassword' => 'required',
   			'full_name'	=> 'required',
-  			'username'	=> 'required'
+  			'username'	=> 'required',
+            'day' => 'required',
+            'month' => 'required',
+            'year' => 'required',
+            'gender' => 'required',
+            'question' => 'required',
+            'answer' => 'required',
+            
   		] );
 
   		if( $validation->fails() ) {
@@ -30,14 +37,23 @@ class RegistrationController extends \BaseController {
   		$password = Input::get('password');
   		$repassword = Input::get('repassword');
   		$name = Input::get('full_name');
-  		$gender = Input::get('username');
-
+  		$username = Input::get('username');
+        $vquestion = Input::get('question');
+        $vanswer = Input::get('answer');
+        $gender = Input::get('gender');
+        $dob = Input::get('year')."-".Input::get('month')."-".Input::get('day');
+        
   		try{
   			User::create( [
   				'email'	=> $email,
   				'password'	=> Hash::make($password),
   				'full_name' => $name,
-  				'username'	=> $gender
+  				'username'	=> $username,
+                'profile_pic' => 'default_picture.jpg',
+                'gender' => $gender,
+                'verification_question' => $vquestion,
+                'verification_answer' => $vanswer,
+                'date_of_birth' => $dob,
   			] );
   		} catch( Exception $e ) {
   			//Errors Log

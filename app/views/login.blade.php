@@ -31,7 +31,7 @@
 			{{Form::close()}}
 		</div>
 		<div class="form-group signUpNewAcc">
-			<p class="text-center">Don't have an account? <a href="/signup" class="btn btn-link">Sign up</a></p>
+			<p class="text-center">Don't have an account? <a href="/signup" class="btn btn-link form-control">Sign up</a></p>
 		</div>
 	</div>
 
