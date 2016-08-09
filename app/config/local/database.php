@@ -25,7 +25,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'cinemaphile',
 			'username'  => 'root',
-			'password'  => 'lij135jil',
+			'password'  => 'root',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
