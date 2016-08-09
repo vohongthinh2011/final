@@ -13,12 +13,12 @@ class EditFriendsAndAddToUsers extends Migration {
 	public function up()
 	{
 		Schema::table('users', function(Blueprint $table){
-            $table->integer('num_of_friends')->after('verification_answer');
+            $table->integer('num_of_friends');
         });
         
         Schema::table('friends', function(Blueprint $table){
             $table->dropColumn('friend_id');
-            $table->string('name')->after('user_id');
+            $table->string('name');
         });
 	}
 
