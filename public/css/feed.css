@@ -26,7 +26,7 @@
 .form-group textarea{
 	width:100%;
 	resize: none;
-	border-color: #eeeeee;
+
 }
 
 .panel-content{
@@ -56,4 +56,9 @@
 .review-box{
     border-color: dimgrey;
     border-width: 5px;
+}
+.response{
+    margin: 10px 0px 10px 0px;
+	background: #f8f8f8;
+	padding: 10px 10px 10px 10px;	
 }

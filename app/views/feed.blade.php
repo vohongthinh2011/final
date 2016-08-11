@@ -26,6 +26,7 @@
         </div>
             
     </div>
+    
 </div>
 <div class="col-xs-10 col-sm-6 multi-vertical-scroll">
     <div class="container-fluid">
@@ -38,9 +39,27 @@
         <div class="panel-content">
             <img src="/images/{{$review->profile_pic}}" class="profile-pic"><br>
             <h3>{{$review->movie_title}}:</h3><br>
-            {{$review->content}}<br>
+            <blockquote>{{$review->content}}</blockquote>
+            
+            {{Form::open(['action' => 'ReactionController@postReaction', 'class' => 'form', 'method' => 'POST'])}}
+            <div class="form-group">
+            <textarea name="content"></textarea>
+            </div>
+            {{Form::hidden('reviewid', $review->review_id)}}
+           
+            {{Form::submit('Respond', ['class' => 'btn btn-default'])}}
+            {{Form::close()}}
+            
         </div>
         </div>
+        @foreach($responses[$review->review_id] as $response)
+           <div class="response">
+               <p>{{$response->name}} responded at {{$response->created_at}}</p>
+               <p>{{$response->content}}</p>
+            </div>
+        @endforeach 
+        
+               
     @endforeach  
    </div>           
 </div>

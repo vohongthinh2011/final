@@ -31,17 +31,17 @@ class FeedController extends \BaseController {
         }
         //reverse sort newest to oldest feed news
         $feed_reviews = array_reverse($feed_reviews);
-        /*
+        
 		$review_response = [];
 
 		foreach($feed_reviews as $feed_review){
-			$review_response[$feed_review->id] = Reaction::where('review_id', '=', $review->id)->get();
-		}*/
+			$review_response[$feed_review->review_id] = Reaction::where('review_id', '=', $feed_review->review_id)->get();
+		}
 
 		return View::make('feed', [
 			'user' => $user,
 			'reviews' => $feed_reviews,
-			//'response' => $review_response,
+			'responses' => $review_response,
 		]);
 	}
 

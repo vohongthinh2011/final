@@ -44,7 +44,7 @@
                         <table class="table table-hover">
                         @foreach($friends as $friend)
                             <tr>
-                            <th>Name: {{$friend->user_id}}</th>
+                            <th>Name: {{$friend->full_name}}</th>
                             <th>Email: {{$friend->email}}</th>
                             <th>Friend since: {{$friend->pivot->created_at}}</th>
                             </tr>

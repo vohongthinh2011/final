@@ -11,7 +11,7 @@ class FriendController extends \BaseController {
         $friends2 = $user->friendsUserAccepted;
         
         //merge both queries defined in User model to yeild User queries of all $friends
-        $friends = $friends1->merge($friends2);
+        $friends = $friends1->merge($friends2)->sortBy('created_at')->reverse();
         
         return View::make('friends', [
             'user' => $user,
@@ -48,7 +48,7 @@ class FriendController extends \BaseController {
         try{
             //adds to pivot table
             $user->friendsUserRequested()->attach($friend_query->id);
-            $user->num_of_friends += 1;
+            //$user->num_of_friends += 1;
             $user->save();
             
         }catch(Exception $e){
@@ -58,6 +58,10 @@ class FriendController extends \BaseController {
         }
         
         return Redirect::to('/friends');
+        
+    }
+    
+    public function acceptFriend(){
         
     }
 
