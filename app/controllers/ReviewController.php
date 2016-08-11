@@ -24,7 +24,7 @@ class ReviewController extends \BaseController {
             $movies_array = json_decode($movies_string, true);
             
             
-            return View::make('/search', [
+            return View::make('search', [
                 'movie_results' => $movies_array,
                 'count' => $movie_count,
                 'movie_number' => $movie_number]);
@@ -60,7 +60,8 @@ class ReviewController extends \BaseController {
                 'content' => $content,
                 //'rating' => $rating,
                 'movie_id' => $movie_id,
-                'movie_title' => $movie_title
+                'movie_title' => $movie_title,
+                'name' => $user->full_name,
             ]);
         }catch(Exception $e){
             Session::flash('error_message', 'Oops! something is wrong, try again');

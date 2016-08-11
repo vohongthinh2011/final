@@ -1,18 +1,13 @@
-body, html {
-  
-  overflow: hidden;
-  height:100%;
-  background-color: black;
 
+body{
+  background-color: black;
 }
 
 
 .multi-vertical-scroll{
-  height:100%;
+  height:100vh;
   overflow-y: scroll; 
   background-color: lightgrey;
-  padding-top: 10px;
-  padding-bottom: 70px;
 
 
 }

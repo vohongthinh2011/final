@@ -22,5 +22,6 @@ class ProfileController extends \BaseController{
        }
        return View::make('profile', ['user' => $user]);
    }
+   
     
 }

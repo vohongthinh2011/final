@@ -1,25 +1,59 @@
+
+.body{
+  background-color: black;
+}
+
 .profile-pic{
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     float: left;
     border-radius:50%;
     margin-right:25px;
 }
-.review-post{
-    margin: 10px 10px 10px 10px;
-    background: #fff;
-    padding: 20px 20px 20px 20px;
-}
-
-.reaction-post{
-    margin: 10px 0px 10px 10px;
-    background: #f8f8f8;
-    padding: 10px 10px 10px 10px;
-}
-
 .profile{
     margin: 10px 10px 10px 10px;
     background: #fff;
     padding: 20px 20px 20px 20px;
     text-align: center;
+}
+
+.multi-vertical-scroll{
+  height:100vh;
+  overflow-y: scroll; 
+  background-color: lightgrey;
+}
+
+.form-group textarea{
+	width:100%;
+	resize: none;
+	border-color: #eeeeee;
+}
+
+.panel-content{
+    padding: 10px;
+}
+
+.panel > .panel-heading{
+    background-image: none;
+    background-color: dimgray;
+    color: white;
+}
+
+.panel{
+    border-color: dimgray
+}
+.centering-image{
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.line-break{
+    border-width: 5px;
+    border-color: darkgrey;
+}
+
+.review-box{
+    border-color: dimgrey;
+    border-width: 5px;
 }

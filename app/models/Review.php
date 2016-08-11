@@ -4,18 +4,16 @@ class Review extends Eloquent{
 
 
 
-	/**
-	 * The database table used by the model.
-	 *
-	 * @var string
-	 */
 	protected $table = 'reviews';
+    
 
 	protected $fillable = ['user_id', 'content', 'rating', 'in_sync', 'movie_title', 'movie_id'];
-	/**
-	 * The attributes excluded from the model's JSON form.
-	 *
-	 * @var array
-	 */
-
+	
+     
+     //append profile pics to rows for feed 
+     public function setProfilePic($pic)
+     {
+         $this->profile_pic = $pic;
+     }
+     
 }
