@@ -6,32 +6,6 @@ class ReviewController extends \BaseController {
    
     public function postReview(){
         
-        if(!Input::has('content')){
-            $validation = Validator::make(Input::all(),[
-                'movies' => 'required',
-                'count' => 'required',
-                'movie_number' => 'required',
-            ]);
-            
-            if($validation->fails()){
-                $messages = $validation->messages();
-                Session::flash('validation_messages', $messages);
-                
-            }
-            $movies_string = Input::get('movies');
-            $movie_count = (int)Input::get('count');
-            $movie_number = (int)Input::get('movie_number');
-            $movies_array = json_decode($movies_string, true);
-            
-            
-            return View::make('search', [
-                'movie_results' => $movies_array,
-                'count' => $movie_count,
-                'movie_number' => $movie_number]);
-           
-            
-        }
-        else{ 
         
         $validation = Validator::make(Input::all(),[
             'content' => 'required',
@@ -70,6 +44,6 @@ class ReviewController extends \BaseController {
         
         return Redirect::to('/feed');
         }
-    }
+    
 
 }
