@@ -14,5 +14,16 @@
     {{Form::open(['action' => 'ProfileController@addImage', 'method' => 'POST', 'files' => true])}}
     {{Form::file('picture')}}
     {{Form::submit('submit', ['class' => 'btn btn-primary'])}}
+   	<p>print something</p>
+    <p>Date of Birth: </p>{{Form::$user->date_of_birth}}
+    @foreach($reviews as $review)
+    <p>{{$review->content}}</p>
+    <p>{{$review->rating}}</p>
+    <p>{{$review->movie_title}}</p>
+    <p>{{$review->name}}</p>
     {{Form::close()}}
+
+
+
+
 @stop 
