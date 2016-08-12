@@ -31,7 +31,6 @@
         @if($count > 0)
         
             @for ($i = 0; $i < $count; $i++)
-            {{ $i }}
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">{{$movie_results[$i]['original_title']}}</h3>
@@ -44,16 +43,15 @@
                 </div>
                 <div class="panel-footer">
                     {{Form::button('Rate it', ['class' => 'btn btn-block btn-lg btn-default',
-                        'data-toggle' => 'modal', 'data-target' => '#myModal'])}}
+                        'data-toggle' => 'modal', 'data-target' => '#'.$i])}}
                 </div>
             </div>
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal fade" id="{{ $i }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" area-label="Close"><spane aria-hidden="true">&times;</span></button>
-                            <h3 class="modal-title" id="myModalLabel">
-                            {{ $i }} {{$movie_results[$i]['original_title']}}</h3>
+                            <h3 class="modal-title" id="myModalLabel">{{$movie_results[$i]['original_title']}}</h3>
                         </div>
                         <div class="modal-body">
                             {{HTML::image('https://image.tmdb.org/t/p/w185'.$movie_results[$i]['poster_path'], null, ['class' => 'img-rounded centering-image'])}}<br> 
@@ -92,11 +90,19 @@
     
                             {{Form::button('Close', ['class' => 'btn-btn-alert', 'data-dismiss' => 'modal'])}}
                             {{Form::submit('Post', ['class' => 'btn btn-primary btn-lg'])}}
-                            <hr class="line-break">
                             @foreach($movie_reviews as $review)
-                            <hr class="line-break">
+                            
                                 @if($review->movie_id == $movie_results[$i]['id'])
+                                <hr class="line-break">
                                     {{ $review->name }} said {{ $review->content }}
+                                        @foreach($movie_review_reactions as $reaction)
+                                            @if($reaction->review_id == $review->review_id)
+                                            <hr class="line-break">
+                                            {{ $reaction->name }} responded with {{ $reaction->content}}
+                                            <hr class="line-break">
+                                            @endif
+                                            
+                                        @endforeach
                                     <hr class="line-break">
                                 @endif
                             @endforeach

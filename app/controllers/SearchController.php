@@ -22,14 +22,14 @@ class SearchController extends \BaseController {
         //get total number of movie results 
         $num_of_results = count($search_details);
         $movie_reviews = Review::all();
-        $movie_review_reacions = Reaction::all();
+        $movie_review_reactions = Reaction::all();
         $users = User::all();
         
         return View::make('search', [
         	'count' => $num_of_results, 
         	'movie_results' => $search_details, 
         	'movie_reviews' => $movie_reviews,
-        	'movie_review_reacions' => $movie_review_reacions, 
+        	'movie_review_reactions' => $movie_review_reactions, 
         	'users' => $users ]);	
     }
 }
