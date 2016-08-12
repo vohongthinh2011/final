@@ -19,16 +19,15 @@
             <div class="panel-heading"><h3>{{$user->full_name}}</h3></div>
             <table class="table table-striped">
                 <tr><p><img src="/images/{{$user->profile_pic}}" class="profile-pic"></p></tr>
-                <tr><p>{{$user->gender}}</p></tr>
-                <tr><p>{{$user->date_of_birth}}</p></tr>
-                <tr><p><a href="/feed">Back to Feed</a></p></tr>
+                <tr><p>Joined on: {{$user->created_at}}</p></tr>
+                
             </table>
         </div>
             
     </div>
     
 </div>
-<div class="col-xs-10 col-sm-6 multi-vertical-scroll">
+<div class="col-xs-12 col-sm-9">
     <div class="container-fluid">
     @foreach($reviews as $review)
         <div class="panel panel-default">
@@ -69,7 +68,5 @@
     </div>
 </div>
 
-
-<
 @stop
 

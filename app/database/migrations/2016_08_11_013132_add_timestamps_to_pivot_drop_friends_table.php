@@ -25,15 +25,7 @@ class AddTimestampsToPivotDropFriendsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::create('friends', function(Blueprint $table)
-		{
-			$table->increments('id');
-			$table->integer('user_id');
-			$table->integer('friend_id');
-            $tabile->string('name');
-			$table->text('email');
-			$table->timestamps();
-		});
+		
         
         Schema::table('friend_user', function(Blueprint $table){
            $table->dropColumn('created_at');
