@@ -12,13 +12,17 @@ class CreateUserFriendRelation extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('friend_user', function(Blueprint $table){
-           $table->integer('user_id');
-           $table->integer('friend_id');
+
+		
+		Schema::create('friend_user', function(Blueprint $table)
+		{
+			$table->increments('id');
+    	    $table->integer('user_id');
+			$table->integer('friend_id');
         });
-        Schema::table('friends', function(Blueprint $table){
-            $table->integer('friend_id')->after('user_id');
-        });
+
+
+        
 	}
 
 	/**
@@ -29,9 +33,7 @@ class CreateUserFriendRelation extends Migration {
 	public function down()
 	{
 		Schema::drop('friend_user');
-        Schema::table('friends', function(Blueprint $table){
-            $table->dropColumn('friend_id');
-        });
+        
 	}
 
 }

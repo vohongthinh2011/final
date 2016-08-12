@@ -12,7 +12,7 @@ class AddTimestampsToPivotDropFriendsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::drop('friends');
+		
         Schema::table('friend_user', function(Blueprint $table){
             $table->timestamps();
         });
