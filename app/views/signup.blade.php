@@ -9,7 +9,7 @@
 @stop
 
 @section('content')
-<!-- <div class="container">
+ <div class="container">
 	<h1 align="center">Sign Up Form</h1>
 	<p align="center">Sign up an new account free and join our community!</p>
 
@@ -59,13 +59,13 @@
 		{{ Form::text('answer' , null, [ 'placeholder' => 'Verification Answer', 'class' => 'form-control', 'required']) }}
 		</div>
 		{{ Form:: submit('Sign Up', ['class' => 'btn btn-primary btn-lg btn-block signup-input-bar']) }}
-
+        <div class="login"><a href="/login">Go Back to Login</a></div>
 	{{ Form::close()}}
 
-</div> -->
+</div> 
 
 
-
+<!--
 
 
 <div class="body"></div>
@@ -80,7 +80,7 @@
 			{{ Form::open(['action'=> 'RegistrationController@signUp', 'method' => 'POST']) }}
 
 
-<!-- 				<input type="text" placeholder="username" name="user"><br> -->
+<!-- 				<input type="text" placeholder="username" name="user"><br> - ->
 				{{ Form::text('full_name', null, [ 'placeholder' => 'Name', 'class' => 'form-control', 'required']) }}
 
 				{{ Form::text('username', null, [ 'placeholder' => 'Username', 'class' => 'form-control', 'required']) }}
@@ -96,11 +96,11 @@
 				{{ Form::text('question', null, [ 'placeholder' => 'Verification Question', 'class' => 'form-control', 'required']) }}
 				{{ Form::text('answer' , null, [ 'placeholder' => 'Verification Answer', 'class' => 'form-control', 'required']) }}
 
-<!-- 				<input type="button" value="Login"> -->
+<!-- 				<input type="button" value="Login"> - ->
 				{{ Form:: submit('Sign Up', ['class' => 'btn btn-primary btn-lg btn-block signup-input-bar']) }}
 			{{Form::close()}}
 
 			<div class="login"><a href="/login">Go Back to Login</a></div>
 		</div>
-
+-->
 @stop

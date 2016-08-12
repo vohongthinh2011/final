@@ -12,5 +12,5 @@ modules:
         - Laravel4
     config:
         PhpBrowser:
-            url: 'http://104.236.95.69/'
-            #url: 'http://localhost/myapp/'
+            #url: 'http://104.236.95.69/'
+            url: 'http://localhost/myapp/'

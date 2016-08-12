@@ -1,3 +1,4 @@
+/*
 @import url(http://fonts.googleapis.com/css?family=Exo:100,200,400);
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
 
@@ -19,8 +20,8 @@ body{
 	bottom: -40px;
 	width: auto;
 	height: auto;
-/*	background-image: url(http://ginva.com/wp-content/uploads/2012/07/city-skyline-wallpapers-008.jpg);
-*/	background-color: #222222;
+	background-image: url(http://ginva.com/wp-content/uploads/2012/07/city-skyline-wallpapers-008.jpg);
+	background-color: #222222;
 	background-size: cover;
 	-webkit-filter: blur(5px);
 	z-index: 0;
@@ -34,7 +35,7 @@ body{
 	bottom: -40px;
 	width: auto;
 	height: auto;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); // Chrome,Safari4+ 
 	z-index: 1;
 	opacity: 0.7;
 }
@@ -143,7 +144,7 @@ body{
   margin: 0 1rem 0 0 ;
   
   cursor: pointer;
-}*/
+}
 
 
 
@@ -197,7 +198,7 @@ body{
 
 .signup input[type=radio]:checked ~ label{
   color: #0DFF92;
-}*/
+}
 
 .signup input[type=submit]:hover{
 	opacity: 0.8;
@@ -234,8 +235,8 @@ body{
    color: rgba(255,255,255,0.6);
 }
 
-
-/*body{
+*/
+body{
     background-color: lightgrey;
 }
 
@@ -290,4 +291,3 @@ body{
 	margin: 16px auto;
 	font-size: 16px;
 }
-*/
