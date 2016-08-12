@@ -24,7 +24,8 @@ class DeleteFromUsers extends Migration {
 	 */
 	public function down()
 	{
-		Schema::table('users', function(Blueprint $table){
+		Schema::table('users', function(Blueprint $table)
+		{
             $table->integer('number_of_friends');
         });
 	}
