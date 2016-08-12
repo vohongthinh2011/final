@@ -78,22 +78,32 @@
     
                             {{Form::button('Close', ['class' => 'btn-btn-alert', 'data-dismiss' => 'modal'])}}
                             {{Form::submit('Post', ['class' => 'btn btn-primary btn-lg'])}}
-                            @foreach($movie_reviews as $review)
-                            
-                                @if($review->movie_id == $movie_results[$i]['id'])                                
+                            {{Form::close()}}
+                            @foreach($movie_reviews as $review)                            
+                                @if($review->movie_id == $movie_results[$i]['id'])
+                                <div class="review">                                                          
                                     {{ $review->name }} said {{ $review->content }}
-                                    <hr class="line-break">
+                                </div>
                                         @foreach($movie_review_reactions as $reaction)
                                             @if($reaction->review_id == $review->review_id)
-                                            {{ $reaction->name }} responded with {{ $reaction->content}}
-                                            <hr class="line-break">
-                                            @endif
-                                            
-                                        @endforeach
-                                    <hr class="line-break">
+                                            <div class="response">                                            
+                                            {{ $reaction->name }} responded with {{ $reaction->content}}   
+                                            </div>                                                                                
+                                            @endif                                            
+                                        @endforeach 
+                                        
+                                        {{Form::open(['action' => 'ReactionController@postReaction', 'class' => 'form', 'method' => 'POST'])}}
+                                            <h4>        React!</h4>
+                                            <div class="form-group">                                            
+                                            <textarea name="content"></textarea>
+                                            </div>
+                                            {{Form::hidden('reviewid', $review->review_id)}}
+           
+                                            {{Form::submit('Respond', ['class' => 'btn btn-default'])}}
+                                            {{Form::close()}}                               
                                 @endif
+                                
                             @endforeach
-                            {{Form::close()}}
                         </div>
                     </div>
                 </div>
