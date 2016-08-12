@@ -12,7 +12,7 @@
 @section('content')
 
 
-<div class="col-xs-12 col-sm-12 multi-vertical-scroll">
+<div class="col-xs-12 ">
   <div class="container-fluid">
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
@@ -28,43 +28,40 @@
         </div>
     </nav>
 
-        @if($count > 0)
+    @if($count > 0)
         
-            @for ($i = 0; $i < $count; $i++)
+        @for ($i = 0; $i < $count; $i++)
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">{{$movie_results[$i]['original_title']}}</h3>
                 </div>
-                <div class="row">
-                
                 <div class="panel-content">
-                <div class="col-xs-4">
-                {{HTML::image('https://image.tmdb.org/t/p/w185'.$movie_results[$i]['poster_path'], null, ['class' => 'img-rounded centering-image'])}}
+                    <div class="row">                   
+                        <div class="col-xs-4">
+                            {{HTML::image('https://image.tmdb.org/t/p/w185'.$movie_results[$i]['poster_path'], null, ['class' => 'img-rounded centering-image'])}}
+                        </div>
+                         <div class="col-xs-8">
+                            Release date: {{$movie_results[$i]['release_date']}}<br>
+                            <hr class="line-break">
+                            {{$movie_results[$i]['overview']}}<br>                
+                            <hr class="line-break">
+                            RATINGS(TMDB):<br>
+                            Number of Votes: {{$movie_results[$i]['vote_count']}}<br>
+                            Average Rating per Vote: {{$movie_results[$i]['vote_average']}}/10<br><br>
+                            <hr class="line-break">
+                            RATINGS(CINEMAPHILE):<br>
+                            Number of Votes: <br>
+                            Average Rating per Vote: <br>
+                            <br>                                            
+                         </div>
+                    </div>
+                    <div class="panel-footer">
+                        {{Form::button('What is your Review?', ['class' => 'btn btn-block btn-lg btn-default',
+                            'data-toggle' => 'modal', 'data-target' => '#'.$i])}}
+                         <br>
+                    </div>  
                 </div>
-                <div class="col-xs-8">
-                Release date: {{$movie_results[$i]['release_date']}}<br>
-                <hr class="line-break">
-                {{$movie_results[$i]['overview']}}<br>                
-                <hr class="line-break">
-                RATINGS(TMDB):<br>
-                Number of Votes: {{$movie_results[$i]['vote_count']}}<br>
-                Average Rating per Vote: {{$movie_results[$i]['vote_average']}}/10<br><br>
-                <hr class="line-break">
-                RATINGS(CINEMAPHILE):<br>
-                Number of Votes: <br>
-                Average Rating per Vote: <br>
-                <br>
-                {{Form::button('What is your Review?', ['class' => 'btn btn-block btn-lg btn-default',
-                        'data-toggle' => 'modal', 'data-target' => '#'.$i])}}
-                        <br>
-                </div>
-                <div class="panel-footer">
-                    {{Form::button('Rate it', ['class' => 'btn btn-block btn-lg btn-default',
-                        'data-toggle' => 'modal', 'data-target' => '#'.$i])}}
-                </div>
-                <br>
-            </div>
-            <div class="modal fade" id="{{$i}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal fade" id="{{$i}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -100,11 +97,9 @@
                                             @endif                                            
                                         @endforeach                                         
                                         {{Form::open(['action' => 'ReactionController@postReaction', 'class' => 'form', 'method' => 'POST'])}}
-                                            @if($reaction)
+                                            
                                             <h6>Join in on the conversation!</h6>
-                                            @else
-                                            <h6>Start a conversation!</h6>
-                                            @endif
+                                            
                                             <span class="form-group">                                            
                                             <textarea name="content"></textarea>
                                             
@@ -123,9 +118,8 @@
                         </div>
                     </div>
                 </div>
+                </div>
             </div>
-            @endfor            
-        @endif         
-    </div>
-</div>
+        @endfor            
+    @endif         
 @stop

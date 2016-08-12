@@ -32,11 +32,12 @@
     @foreach($reviews as $review)
         <div class="panel panel-default">
         <div class="panel-heading">
+        <img src="/images/{{$review->profile_pic}}" class="profile-pic"><br>
             <h3 class="panel-title">{{$review->name}} posted a review on {{$review->created_at}}</h3>
             
         </div>
         <div class="panel-content">
-            <img src="/images/{{$review->profile_pic}}" class="profile-pic"><br>
+            
             <h3>{{$review->movie_title}}:</h3><br>
             <blockquote>{{$review->content}}</blockquote>
             
