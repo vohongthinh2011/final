@@ -30,7 +30,7 @@ class AddTimestampsToPivotDropFriendsTable extends Migration {
 			$table->increments('id');
 			$table->integer('user_id');
 			$table->integer('friend_id');
-            $tabile->string('name');
+            $table->string('name');
 			$table->text('email');
 			$table->timestamps();
 		});

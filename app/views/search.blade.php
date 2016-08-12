@@ -58,23 +58,11 @@
                             {{HTML::image('https://image.tmdb.org/t/p/w185'.$movie_results[$i]['backdrop_path'], null, ['class' => 'img-rounded centering-image'])}}<br>
                             <hr class="line-break">
                             Release date: {{$movie_results[$i]['release_date']}}<br>
-                            Movie ID: {{$movie_results[$i]['id']}}<br>
-                            Language: {{$movie_results[$i]['original_language']}}<br>
-                            Adult: {{$movie_results[$i]['adult']}}<br>
-                            @if(gettype($movie_results[$i]['genre_ids']) == "array")
-                                Genre: 
-                                @foreach($movie_results[$i]['genre_ids'] as $genre_id)
-                                    {{$genre_id}}    
-                                @endforeach  
-                                <br>
-                            @endif 
-                            <hr class="line-break">
-                            Movie Description: {{$movie_results[$i]['overview']}}<br>
+                            <hr class="line-break">{{$movie_results[$i]['overview']}}<br>
                             <hr class="line-break">
                             RATINGS(TMDB):<br>
-                            Popularity: {{$movie_results[$i]['popularity']}}<br>
                             Number of Votes: {{$movie_results[$i]['vote_count']}}<br>
-                            Average Rating per Vote: {{$movie_results[$i]['vote_average']}}<br><br>
+                            Average Rating per Vote: {{$movie_results[$i]['vote_average']}}/10<br><br>
                             <hr class="line-break">
                             RATINGS(CINEMAPHILE):<br>
                             Number of Votes: <br>
@@ -92,12 +80,11 @@
                             {{Form::submit('Post', ['class' => 'btn btn-primary btn-lg'])}}
                             @foreach($movie_reviews as $review)
                             
-                                @if($review->movie_id == $movie_results[$i]['id'])
-                                <hr class="line-break">
+                                @if($review->movie_id == $movie_results[$i]['id'])                                
                                     {{ $review->name }} said {{ $review->content }}
+                                    <hr class="line-break">
                                         @foreach($movie_review_reactions as $reaction)
                                             @if($reaction->review_id == $review->review_id)
-                                            <hr class="line-break">
                                             {{ $reaction->name }} responded with {{ $reaction->content}}
                                             <hr class="line-break">
                                             @endif
@@ -111,15 +98,8 @@
                     </div>
                 </div>
             </div>
-            @endfor
-            
-        @endif 
-        
+            @endfor            
+        @endif         
     </div>
 </div>
-
-
-
-
-
 @stop
