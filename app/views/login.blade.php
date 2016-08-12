@@ -10,7 +10,7 @@
 @stop
 
 @section('content')
-
+<!--
 <div class="body"></div>
 		<div class="grad"></div>
 		<div class="header">
@@ -21,13 +21,13 @@
 		<div class="login">
 			{{Form::open(['action' => 'AuthenticationController@loginUser', 'method' => 'POST'])}}
 
-<!-- 				<input type="text" placeholder="username" name="user"><br> -->
+<!- - 				<input type="text" placeholder="username" name="user"><br> - ->
 				{{ Form::email('email', null, [ 'placeholder' => 'Email', 'required']) }}
 
-<!-- 				<input type="password" placeholder="password" name="password"><br> -->
+<!- - 				<input type="password" placeholder="password" name="password"><br> - ->
 				{{ Form::password("password" , [ 'placeholder' => 'Password', 'required'])}}
 
-<!-- 				<input type="button" value="Login"> -->
+<!- - 				<input type="button" value="Login"> - ->
 				{{ Form:: submit('Login', [ 'class' => 'btn btn-primary btn-block']) }}
 			{{Form::close()}}
 
@@ -35,11 +35,11 @@
 			<a href="/signup">Sign Up for Free</a>
 			</div>
 		</div>
-
+-->
 		
 
 
-<!-- 	<div class="container">
+	<div class="container">
 		<div class="login-triangle"></div>
 		<div>
 			<h1 align="center">Log in</h1>
@@ -62,6 +62,6 @@
 		<div class="form-group signUpNewAcc">
 			<p class="text-center">Don't have an account? <a href="/signup" class="btn btn-link form-control">Sign up</a></p>
 		</div>
-	</div> -->
+	</div> 
 
 @stop

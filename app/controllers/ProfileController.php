@@ -15,10 +15,6 @@ class ProfileController extends \BaseController{
     }
     
     public function editProfile(){
-        
-    }
-    
-    public function addImage(){
         $user = Auth::user();
         if(Input::hasFile('picture')){
             $file = Input::file('picture');
@@ -30,6 +26,10 @@ class ProfileController extends \BaseController{
        }
        return View::make('profile', ['user' => $user]);
    }
+    
+    
+    
+        
    
     
 }

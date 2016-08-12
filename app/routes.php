@@ -40,5 +40,4 @@ Route::post('/friends', 'FriendController@addFriend');
 Route::get('/profile', 'ProfileController@showProfile');
 Route::get('/profile', 'ProfileController@showFeed');
 Route::post('/profile', 'ProfileController@editProfile');
-Route::post('/profile', 'ProfileController@addImage');
 

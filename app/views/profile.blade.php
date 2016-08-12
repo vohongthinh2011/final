@@ -11,7 +11,7 @@
 @section('content')
     <img src="/images/{{ $user->profile_pic }}" class="profile-pic">
     <h2>{{$user->full_name}}'s Profile</h2>
-    {{Form::open(['action' => 'ProfileController@addImage', 'method' => 'POST', 'files' => true])}}
+    {{Form::open(['action' => 'ProfileController@editProfile', 'method' => 'POST', 'files' => true])}}
     {{Form::file('picture')}}
     {{Form::submit('submit', ['class' => 'btn btn-primary'])}}
    	<p>print something</p>
