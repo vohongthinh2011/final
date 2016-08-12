@@ -29,8 +29,6 @@ class CreateUsersTable extends Migration {
 			$table->string('verification_answer', 255);
 			$table->rememberToken();
 			$table->timestamps();
-
-
 		});
 	}
 

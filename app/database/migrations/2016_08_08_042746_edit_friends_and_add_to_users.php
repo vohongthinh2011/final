@@ -33,7 +33,7 @@ class EditFriendsAndAddToUsers extends Migration {
             $table->dropColumn('num_of_friends');
         });
         
-        Schema::table('friends', function(Blueprint $table){
+       Schema::table('friends', function(Blueprint $table){
 
             $table->dropColumn('name');
             $table->integer('friend_id')->after('user_id');
