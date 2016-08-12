@@ -24,6 +24,15 @@ class SearchController extends \BaseController {
         $movie_reviews = Review::all();
         $movie_review_reactions = Reaction::all();
         $users = User::all();
+
+        foreach($users as $user){
+           foreach($movie_reviews as $review){
+               if($review->user_id == $user->id)
+               {
+                   $review->setProfilePic($user->profile_pic);
+               }
+           }
+       }
         
         return View::make('search', [
         	'count' => $num_of_results, 
