@@ -32,7 +32,7 @@ class CreateUserFriendRelation extends Migration {
 	 */
 	public function down()
 	{
-		//Schema::drop('friend_user');
+		Schema::drop('friend_user');
         
 	}
 

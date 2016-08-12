@@ -24,9 +24,9 @@ class AddBooleancolumnToPivottable extends Migration {
 	 */
 	public function down()
 	{
-		/*Schema::table('friend_user', function(Blueprint $table){
+		Schema::table('friend_user', function(Blueprint $table){
             $table->dropColumn('accepted');
-        });*/
+        });
 	}
 
 }
