@@ -35,7 +35,7 @@ class AddTimestampsToPivotDropFriendsTable extends Migration {
 			$table->timestamps();
 		});
         
-        Schmea::table('friend_user', function(Blueprint $table){
+        Schema::table('friend_user', function(Blueprint $table){
            $table->dropColumn('created_at');
            $table->dropColumn('updated_at'); 
         });

@@ -20,16 +20,29 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     //use pivot table and many-to-many relation to retrieve User queries of all friends that user requested
     public function friendsUserRequested()
     {
-        return $this->belongsToMany('User', 'friend_user', 'user_id', 'friend_id')->withTimestamps();
+        return $this->belongsToMany('User', 'friend_user', 'user_id', 'friend_id')->where('accepted', '=', 1)->withTimestamps();
         
        
     }
-    
     //use pivot table and many-to-many relation to retrieve User queries of all friens that user accepted
     public function friendsUserAccepted()
     {
-        return $this->belongsToMany('User', 'friend_user', 'friend_id', 'user_id')->withTimestamps();
+        return $this->belongsToMany('User', 'friend_user', 'friend_id', 'user_id')->where('accepted', '=', 1)->withTimestamps();
     }
+    
+    
+    public function userFriendsRequestedPending()
+    {
+        return $this->belongsToMany('User', 'friend_user', 'user_id', 'friend_id')->where('accepted', '=', 0)->withTimestamps();
+    }
+    
+    public function friendsUserRequestedPending()
+    {
+        return $this->belongsToMany('User', 'friend_user', 'friend_id', 'user_id')->where('accepted', '=', 0)->withTimestamps();
+    }
+    
+    
+    
     
     
     

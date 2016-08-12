@@ -1,7 +1,66 @@
+body{
+    background-color: lightgrey;
+}
+
+
 .profile-pic{
     width: 150px;
     height: 150px;
-    float: left;
-    border-radius:50%;
-    margin-right:25px;
+    border-radius:100%;
+    margin-right:auto;
+    margin-left:auto;
+    display:block;
 }
+
+.mini-pic{
+    width: 50px;
+    height:50px;
+    float: left;
+    border-radius:25%;
+    
+}
+.line-break{
+    border-width: 5px;
+    border-color: darkgrey;
+}
+
+.panel{
+    border-color: dimgray;
+}
+.panel-content{
+    padding: 20px;
+}
+.panel > .panel-heading{
+    background-image: none;
+    background-color: dimgray;
+    color: white;
+}
+
+
+
+.profile{
+    
+    background: #fff;
+    text-align: left;
+}
+.friend-list{
+   
+    width:500px;
+    background-color: white;
+    height: 75px;
+    text-align: center;
+    padding: 10px;
+    margin: auto;
+    
+}
+blockquote{
+    border-radius:20%;
+}
+.list-border{
+    box-shadow: 10px 10px 20px grey;
+    background: white;
+    border-radius: 5%;
+ 
+}
+
+

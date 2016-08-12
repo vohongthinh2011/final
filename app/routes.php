@@ -11,7 +11,9 @@
 |
 */
 
-
+Route::get('/', function(){
+    return Redirect::to('/login');
+});
 Route::get('/signup', 'RegistrationController@showSignUpView');
 Route::post('/signup', 'RegistrationController@signUp');
 

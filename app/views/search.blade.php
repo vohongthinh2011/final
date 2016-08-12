@@ -43,10 +43,10 @@
                 </div>
                 <div class="panel-footer">
                     {{Form::button('Rate it', ['class' => 'btn btn-block btn-lg btn-default',
-                        'data-toggle' => 'modal', 'data-target' => '#myModal'])}}
+                        'data-toggle' => 'modal', 'data-target' => '#'.$i])}}
                 </div>
             </div>
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal fade" id="{{$i}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">

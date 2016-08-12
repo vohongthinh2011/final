@@ -10,6 +10,12 @@ class FeedController extends \BaseController {
 
 		$user = Auth::user();
         
+        //run default profile pic if picture was deleted
+        if(!file_exists('public/images/'.$user->profile_pic)){
+            $user->profile_pic = 'default_picture.jpg';
+            $user->save();
+        }
+        
         //get network of user and friends
         $friends1 = $user->friendsUserRequested;
         $friends2 = $user->friendsUserAccepted;
@@ -18,6 +24,7 @@ class FeedController extends \BaseController {
         
        // $test = $user->movieReviews;
         //get reviews of entire network
+        
         $reviews = Review::all();
         $feed_reviews = [];
         foreach($network as $users){
