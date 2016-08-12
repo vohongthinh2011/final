@@ -38,6 +38,5 @@ Route::post('/friends', 'FriendController@addFriend');
 
 //profile
 Route::get('/profile', 'ProfileController@showProfile');
-Route::get('/profile', 'ProfileController@showFeed');
 Route::post('/profile', 'ProfileController@editProfile');
 
