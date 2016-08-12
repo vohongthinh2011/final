@@ -12,7 +12,7 @@
 @section('content')
 
 
-<div class="col-xs-4 col-sm-3 multi-vertical-scroll">
+<div class="col-xs-12 col-sm-12 multi-vertical-scroll">
   <div class="container-fluid">
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
@@ -30,7 +30,8 @@
 
         @if($count > 0)
         
-            @for($i = 0; $i < $count; $i++)
+            @for ($i = 0; $i < $count; $i++)
+            {{ $i }}
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">{{$movie_results[$i]['original_title']}}</h3>
@@ -51,7 +52,8 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" area-label="Close"><spane aria-hidden="true">&times;</span></button>
-                            <h3 class="modal-title" id="myModalLabel">{{$movie_results[$i]['original_title']}}</h3>
+                            <h3 class="modal-title" id="myModalLabel">
+                            {{ $i }} {{$movie_results[$i]['original_title']}}</h3>
                         </div>
                         <div class="modal-body">
                             {{HTML::image('https://image.tmdb.org/t/p/w185'.$movie_results[$i]['poster_path'], null, ['class' => 'img-rounded centering-image'])}}<br> 
@@ -87,10 +89,17 @@
                             
                             {{Form::hidden('movieid', $movie_results[$i]['id'])}}
                             {{Form::hidden('movietitle', $movie_results[$i]['original_title'])}}
-                        </div>
-                        <div class="modal-footer">
+    
                             {{Form::button('Close', ['class' => 'btn-btn-alert', 'data-dismiss' => 'modal'])}}
                             {{Form::submit('Post', ['class' => 'btn btn-primary btn-lg'])}}
+                            <hr class="line-break">
+                            @foreach($movie_reviews as $review)
+                            <hr class="line-break">
+                                @if($review->movie_id == $movie_results[$i]['id'])
+                                    {{ $review->name }} said {{ $review->content }}
+                                    <hr class="line-break">
+                                @endif
+                            @endforeach
                             {{Form::close()}}
                         </div>
                     </div>
@@ -104,36 +113,7 @@
 </div>
 
 
-<div class="col-xs-10 col-sm-6 multi-vertical-scroll">
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                </button>
-            <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-star-empty"></span> RATE THE MOVIE</a>
-            </div>
-        </div>
-    </nav>       
-</div>
-<div class="col-xs-4 col-sm-3 multi-vertical-scroll">
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                </button>
-            <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-film"></span> RECOMMENDED</a>
-            </div>
-        </div>
-    </nav>
-</div>
+
 
 
 @stop
