@@ -29,9 +29,9 @@ class EditFriendsAndAddToUsers extends Migration {
 	 */
 	public function down()
 	{
-		Schema::table('users', function(Blueprint $table){
+		/*Schema::table('users', function(Blueprint $table){
             $table->dropColumn('num_of_friends');
-        });
+        });*/
         
        /* Schema::table('friends', function(Blueprint $table){
 
