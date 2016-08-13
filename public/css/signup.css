@@ -18,6 +18,54 @@ body{
 	width: 500px;
 }
 
+
+
+.form-group button{
+	    background:darkgrey;
+  border:0;
+  color:#337ab7;
+  padding:7px;
+  font-size:20px;
+  width:500px;
+  margin:20px auto;
+  display:block;
+  cursor:pointer;
+}
+
+.form-group [type=text]{
+	display:block;
+  width:500px;
+  margin:20px auto;
+  padding:15px;
+  background:rgba(0,0,0,0.2);
+  color:#fff;
+  border-color: darkgrey;
+}
+
+.form-group [type=email]{
+	display:block;
+  width:500px;
+  margin:20px auto;
+  padding:15px;
+  background:rgba(0,0,0,0.2);
+  color:#fff;
+  border-color: darkgrey;
+}
+
+.form-group [type=password]{
+	display:block;
+  width:500px;
+  margin:20px auto;
+  padding:15px;
+  background:rgba(0,0,0,0.2);
+  color:#fff;
+  border-color: darkgrey;
+}
+
+.login p{
+	color: darkgrey;
+}
+
 h1, p, label, h4{
 	color: #FFF;
 }

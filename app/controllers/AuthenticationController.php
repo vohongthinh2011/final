@@ -23,7 +23,7 @@ class AuthenticationController extends \BaseController {
 		if (Auth::attempt(Input::only('email', 'password'), true)){
 			return Redirect::to('/feed');
 		} else {
-			Session::flash('error_message', 'Invalid credentials');
+			Session::flash('error_message', 'We couldn\'t find your email or password combination');
 			return Redirect::to('/login')->withInput();
 		}
 	}
