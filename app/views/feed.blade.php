@@ -16,12 +16,10 @@
   <div class="container-fluid">
     
     <div class="panel panel-default">
-            <div class="panel-heading"><h3>{{$user->full_name}}</h3></div>
-            <table class="table table-striped">
-                <tr><p><img src="/images/{{$user->profile_pic}}" class="profile-pic"></p></tr>
-                <tr><p>Joined on: {{$user->created_at}}</p></tr>
+            <div class="panel-heading">
+            <p><img src="/images/{{$user->profile_pic}}" class="profile-pic"></p><h3>{{$user->full_name}}</h3>
+            <p>Joined on: {{$user->created_at}}</p></div>
                 
-            </table>
         </div>
             
     </div>
