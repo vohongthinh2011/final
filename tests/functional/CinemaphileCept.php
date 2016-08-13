@@ -82,7 +82,7 @@ try{
     //$I->seeRecord('friend-user', [])
     $I->amOnPage('/friends');
 }
-catch(\PHPUnit_Framework_AssertionFailedError $e){
+catch(\PHPUnit_Framework_AssertionFailedError $e){    
     
 }
 try{
@@ -115,7 +115,6 @@ $I->see('RESULTS');
 
 //posts in feed 
 $I->amOnPage('/search');
-$I->grabTextFrom('');
 
 //logout
 $I->click('Account Settings');
