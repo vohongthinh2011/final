@@ -58,8 +58,16 @@
         <div class="form-group signup-input-bar">
 		{{ Form::text('answer' , null, [ 'placeholder' => 'Verification Answer', 'class' => 'form-control', 'required']) }}
 		</div>
-		{{ Form:: submit('Sign Up', ['class' => 'btn btn-default btn-lg btn-block signup-input-bar']) }}
-        <div class="login"><h4 align="center"><a href="/login">Go Back to Login</a></div></h4>
+		<!-- {{ Form:: submit('Sign Up', ['class' => 'btn btn-default btn-lg btn-block signup-input-bar']) }} -->
+		<div class="form-group">
+		<button>Sign Up</button>
+		</div>
+
+        <div class="login">
+			<p class="text-center">Already a User?
+			<br>
+			<a href="/login">Log In</a></p>
+		</div>
 	{{ Form::close()}}
 
 </div> 

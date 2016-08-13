@@ -11,22 +11,75 @@ h1{
     position: relative;
     border-collapse: separate;
     width: 400px;
-	margin: 16px auto;
+/*	margin: 16px auto;*/
 	font-size: 16px;
+	margin-top: 230px;
 	box-sizing: border-box;
 	display: block;
 	padding: 12px;
 }
-/*
-.btn{
-	background-color: lightgrey;
+
+/*.btn,
+.btn-primary,
+.btn-block{
+	background-color: #f4c6a2;
+	border-color: #f4c6a2;
 }
 
-input [type=button]{
-	background-color: lightgrey;
+.btn:hover,
+.btn-primary:hover,
+.btn-block:hover,
+.btn:focus,
+.btn-primary:focus,
+.btn-block:focus,
+.btn:active,
+.btn-primary:active,
+.btn-block:active,
+.btn.active,
+.btn-primary.active,
+.btn-block.active{
+	background-color: #f4c6a2;
+	border-color: #f4c6a2;
 }*/
 
-p{
+.submitButton button{
+
+    background:darkgrey;
+  border:0;
+  color:#337ab7;
+  padding:7px;
+  font-size:20px;
+  width:360px;
+  margin:20px auto;
+  display:block;
+  cursor:pointer;
+}
+
+.form-group [type=email]{
+	display:block;
+  width:360px;
+  margin:20px auto;
+  padding:15px;
+  background:rgba(0,0,0,0.2);
+  color:#fff;
+  border-color: darkgrey;
+}
+
+.form-group [type=password]{
+	display:block;
+  width:360px;
+  margin:20px auto;
+  padding:15px;
+  background:rgba(0,0,0,0.2);
+  color:#fff;
+  border-color: darkgrey;
+}
+
+.alert p{
+	color: red;
+}
+
+.form-group p{
 	color: darkgrey;
 }
 .form-group{

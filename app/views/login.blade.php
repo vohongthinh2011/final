@@ -10,10 +10,15 @@
 @stop
 
 @section('content')
+	@if(Session::has('error_message'))
+		<div class="alert alert-danger" role="alert">
+			<p align="center">{{Session::get('error_message')}}</p>
+		</div>
 
+	@endif
 
 	<div class="container">
-		<div class="login-triangle"></div>
+		
 		<div>
 			<h1 align="center">Log in</h1>
 		</div>
@@ -28,12 +33,15 @@
 		<div class="form-group login-password">
 			{{ Form::password("password" , [ 'placeholder' => 'Password', 'class' => 'form-control', 'required'])}}
 		</div>
-		<div class="form-group submitButton">
-			{{ Form:: submit('Login', [ 'class' => 'btn btn-primary btn-block']) }}
+		<div class="submitButton">
+			<!-- {{ Form:: submit('Login', [ 'class' => 'btn-primary']) }} -->
+			<button>Login</button>
 			{{Form::close()}}
 		</div>
 		<div class="form-group signUpNewAcc">
-			<p class="text-center">Don't have an account? <a href="/signup" class="btn btn-link form-control">Sign up</a></p>
+			<p class="text-center">Don't have an account? 
+			<br>
+			<a href="/signup">Sign up</a></p>
 		</div>
 	</div> 
 
