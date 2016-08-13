@@ -45,13 +45,10 @@
                             <hr class="line-break">
                             {{$movie_results[$i]['overview']}}<br>                
                             <hr class="line-break">
-                            RATINGS(TMDB):<br>
+                            RATINGS:<br>
                             Number of Votes: {{$movie_results[$i]['vote_count']}}<br>
                             Average Rating per Vote: {{$movie_results[$i]['vote_average']}}/10<br><br>
                             <hr class="line-break">
-                            RATINGS(CINEMAPHILE):<br>
-                            Number of Votes: <br>
-                            Average Rating per Vote: <br>
                             <br>                                            
                          </div>
                     </div>
@@ -90,13 +87,13 @@
                             {{Form::submit('Post', ['class' => 'btn btn-primary btn-lg'])}}
                             {{Form::close()}}
                             @foreach($movie_reviews as $review)
-                            <div class="panel-default">                           
+                            <div class="panel panel-default">                           
                                 @if($review->movie_id == $movie_results[$i]['id'])
                                 <div class="panel-heading">
                                     <img src="/images/{{$review->profile_pic}}" class="profile-pic">                                                       
                                     <h3 class="panel-title">{{$review->name}} posted a review on {{$review->created_at}}</h3> <p>{{$review->content}}</p>
                                 </div>
-                                    <div class="panel-content">
+                                <div class="panel-content">
                                                
                                         @foreach($movie_review_reactions as $reaction) 
 
@@ -107,7 +104,7 @@
                                             @endif
                                                                                
                                         @endforeach   
-                                        </div>                                       
+                                                                       
                                         {{Form::open(['action' => 'ReactionController@postReaction', 'class' => 'form', 'method' => 'POST'])}}
                                             
                                             <h6></h6>
@@ -123,9 +120,11 @@
                                             </span>
                                             
                                             
-                                            {{Form::close()}}                               
+                                            {{Form::close()}} 
+                                    </div>                             
+
                                 @endif
-                            </div> 
+                            </div>
                             @endforeach
                         </div>
                     </div>
@@ -134,4 +133,6 @@
             </div>
         @endfor            
     @endif         
+</div>
+</div>
 @stop
