@@ -9,7 +9,7 @@ settings:
     colors: true
     memory_limit: 1024M
 coverage:
-    #ur of file which includes c3 router.
+    #url of file which includes c3 router.
     c3_url: 'http://127.0.0.1:8000/index-test.php/'
     enabled: true
     remote: true
