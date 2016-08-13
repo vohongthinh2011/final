@@ -10,33 +10,6 @@
 @stop
 
 @section('content')
-<!--
-<div class="body"></div>
-		<div class="grad"></div>
-		<div class="header">
-			<div>
-			<h1 align="center">Welcome Back</h1></div>
-		</div>
-		<br>
-		<div class="login">
-			{{Form::open(['action' => 'AuthenticationController@loginUser', 'method' => 'POST'])}}
-
-<!- - 				<input type="text" placeholder="username" name="user"><br> - ->
-				{{ Form::email('email', null, [ 'placeholder' => 'Email', 'required']) }}
-
-<!- - 				<input type="password" placeholder="password" name="password"><br> - ->
-				{{ Form::password("password" , [ 'placeholder' => 'Password', 'required'])}}
-
-<!- - 				<input type="button" value="Login"> - ->
-				{{ Form:: submit('Login', [ 'class' => 'btn btn-primary btn-block']) }}
-			{{Form::close()}}
-
-			<div class="signup">
-			<a href="/signup">Sign Up for Free</a>
-			</div>
-		</div>
--->
-		
 
 
 	<div class="container">
