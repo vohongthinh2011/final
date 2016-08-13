@@ -79,7 +79,7 @@
                                 <input type="radio" name="rating" value="10"><i></i>
                             </span>
                             <div class="form-group">
-                                <textarea class="form-control" rows="5" name="content"></textarea>
+                                <textarea class="form-control" rows="5" name="content" required></textarea>
                                 {{Form::hidden('movieid', $movie_results[$i]['id'])}}
                             {{Form::hidden('movietitle', $movie_results[$i]['original_title'])}}
                             {{Form::submit('Post', ['class' => 'btn btn-default'])}}
@@ -112,7 +112,7 @@
                                             <h6></h6>
                                             
                                             <span class="form-group">                                            
-                                            <textarea name="content">Join in on the conversation!</textarea>
+                                            <textarea name="content" required>Join in on the conversation!</textarea>
                                             
                                             </span>
                                             <span>
