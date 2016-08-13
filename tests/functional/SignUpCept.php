@@ -1,4 +1,6 @@
 <?php 
+
+
 $I = new FunctionalTester($scenario);
 $I->wantTo('Sign up for CinemaPhile');
 $I->amOnPage('/signup');

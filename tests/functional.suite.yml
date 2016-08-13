@@ -13,3 +13,8 @@ modules:
 
     coverage:
       remote: true
+      enabled: true
+      include:
+        - app/*
+      exclude:
+        - app/cache/*
