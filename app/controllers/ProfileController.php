@@ -13,6 +13,7 @@ class ProfileController extends \BaseController{
     
     public function editProfile(){
         $user = Auth::user();
+        $user_reviews = Review::where('user_id' , '=', $user->id)->get();
         if(Input::hasFile('picture')){
             $file = Input::file('picture');
             $filename = time() . '.' . $file->getClientOriginalExtension();
@@ -21,7 +22,8 @@ class ProfileController extends \BaseController{
             $user->profile_pic = $filename;
             $user->save();
        }
-       return View::make('profile', ['user' => $user]);
+       return View::make('profile', ['user' => $user,
+        'reviews' => $user_reviews]);
    }
     
     
