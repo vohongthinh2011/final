@@ -72,16 +72,18 @@
                             {{HTML::image('https://image.tmdb.org/t/p/w185'.$movie_results[$i]['poster_path'], null, ['class' => 'img-rounded centering-image'])}}<br>                    
                             <hr class="line-break">
                             {{Form::open(['action' => 'ReviewController@postReview', 'method' => 'POST', 'class' => "form"])}}  
-                            {{Form::radio('rating', 1)}}<label>1</label>
-                            {{Form::radio('rating', 2)}}<label>2</label>
-                            {{Form::radio('rating', 3)}}<label>3</label>
-                            {{Form::radio('rating', 4)}}<label>4</label>
-                            {{Form::radio('rating', 5)}}<label>5</label>
-                            {{Form::radio('rating', 6)}}<label>6</label>
-                            {{Form::radio('rating', 7)}}<label>7</label>
-                            {{Form::radio('rating', 8)}}<label>8</label>
-                            {{Form::radio('rating', 9)}}<label>9</label>
-                            {{Form::radio('rating', 10)}}<label>10</label>
+                            <span class="star-rating">
+                                <input type="radio" name="rating" value="1"><i></i>
+                                <input type="radio" name="rating" value="2"><i></i>
+                                <input type="radio" name="rating" value="3"><i></i>
+                                <input type="radio" name="rating" value="4"><i></i>
+                                <input type="radio" name="rating" value="5"><i></i>
+                                <input type="radio" name="rating" value="6"><i></i>
+                                <input type="radio" name="rating" value="7"><i></i>
+                                <input type="radio" name="rating" value="8"><i></i>
+                                <input type="radio" name="rating" value="9"><i></i>
+                                <input type="radio" name="rating" value="10"><i></i>
+                            </span>
                             <textarea name="content" class="form-control review-box" rows="5"></textarea>                            
                             {{Form::hidden('movieid', $movie_results[$i]['id'])}}
                             {{Form::hidden('movietitle', $movie_results[$i]['original_title'])}}
