@@ -95,6 +95,7 @@
                                 </div>
                                 <div class="panel-content">
                                     <blockquote>{{$review->content}}</blockquote>
+                                    <blockquote>{{$review->rating}}
                                                
                                         @foreach($movie_review_reactions as $reaction) 
 

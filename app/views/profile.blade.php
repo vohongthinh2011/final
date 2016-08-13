@@ -46,7 +46,8 @@
         <div class="panel-content">
             
             <h3>{{$review->movie_title}}:</h3><br>
-            <blockquote>{{$review->content}} || {{$review->rating}}/10</blockquote>
+            <blockquote>{{$review->content}}</blockquote>
+            <blockquote>{{$review->rating}}/10</blockquote>
             
         </div>
         @foreach($responses[$review->review_id] as $response)
