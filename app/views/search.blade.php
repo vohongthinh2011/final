@@ -72,11 +72,16 @@
                             {{HTML::image('https://image.tmdb.org/t/p/w185'.$movie_results[$i]['poster_path'], null, ['class' => 'img-rounded centering-image'])}}<br>                    
                             <hr class="line-break">
                             {{Form::open(['action' => 'ReviewController@postReview', 'method' => 'POST', 'class' => "form"])}}  
-                            {{Form::radio('rating', '1', ['class' => 'form-control'])}}<label>1</label>
-                            {{Form::radio('rating', '2', ['class' => 'form-control'])}}<label>2</label>
-                            {{Form::radio('rating', '3', ['class' => 'form-control'])}}<label>3</label>
-                            {{Form::radio('rating', '4', ['class' => 'form-control'])}}<label>4</label>
-                            {{Form::radio('rating', '5', ['class' => 'form-control'])}}<label>5</label>
+                            {{Form::radio('rating', 1)}}<label>1</label>
+                            {{Form::radio('rating', 2)}}<label>2</label>
+                            {{Form::radio('rating', 3)}}<label>3</label>
+                            {{Form::radio('rating', 4)}}<label>4</label>
+                            {{Form::radio('rating', 5)}}<label>5</label>
+                            {{Form::radio('rating', 6)}}<label>6</label>
+                            {{Form::radio('rating', 7)}}<label>7</label>
+                            {{Form::radio('rating', 8)}}<label>8</label>
+                            {{Form::radio('rating', 9)}}<label>9</label>
+                            {{Form::radio('rating', 10)}}<label>10</label>
                             <textarea name="content" class="form-control review-box" rows="5"></textarea>                            
                             {{Form::hidden('movieid', $movie_results[$i]['id'])}}
                             {{Form::hidden('movietitle', $movie_results[$i]['original_title'])}}
@@ -87,16 +92,14 @@
                                 @if($review->movie_id == $movie_results[$i]['id'])
                                 <div class="panel-heading">
                                     <img src="/images/{{$review->profile_pic}}" class="profile-pic">                                                       
-                                    <h3 class="panel-title">{{$review->name}} posted a review on {{$review->created_at}}</h3>
-                                    {{$review->content}}
+                                    <h3 class="panel-title">{{$review->name}} posted a review on {{$review->created_at}}</h3> <p>{{$review->content}}</p>
                                 </div>
                                     <div class="panel-content">
                                                
                                         @foreach($movie_review_reactions as $reaction) 
 
                                             @if($reaction->review_id == $review->review_id)                                            
-                                            <div class="response">
-                                            <img src="/images/{{$review->profile_pic}}" class="profile-pic">                                            
+                                            <div class="response">                                           
                                             {{ $reaction->name }} responded with {{ $reaction->content}} on {{ $reaction->created_at}}
                                             </div>                                                                                
                                             @endif

@@ -27,6 +27,7 @@ class ReviewController extends \BaseController {
         //$rating = Input::get('rating');
         $movie_id = Input::get('movieid');
         $movie_title = Input::get('movietitle');
+        $movie_rating = Input::get('rating');
         
         try{
             $review = Review::create([
@@ -36,6 +37,7 @@ class ReviewController extends \BaseController {
                 'movie_id' => $movie_id,
                 'movie_title' => $movie_title,
                 'name' => $user->full_name,
+                'rating' => $movie_rating
             ]);
         }catch(Exception $e){
             Session::flash('error_message', 'Oops! something is wrong, try again');

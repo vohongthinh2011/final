@@ -39,7 +39,7 @@
         <div class="panel-content">
             
             <h3>{{$review->movie_title}}:</h3><br>
-            <blockquote>{{$review->content}}</blockquote>
+            <blockquote>{{$review->content}} || {{$review->rating}}/10</blockquote>
             
             {{Form::open(['action' => 'ReactionController@postReaction', 'class' => 'form', 'method' => 'POST'])}}
             <div class="form-group">
