@@ -4,7 +4,7 @@ class ProfileController extends \BaseController{
     
     public function showProfile(){
         $user = Auth::user();
-        $review_response = [];
+        $user_response = [];
 
         $user_reviews = Review::where('user_id' , '=', $user->id)->get();
         foreach($user_reviews as $user_review){
