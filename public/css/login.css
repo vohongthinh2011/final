@@ -161,6 +161,23 @@ body {
 h1{
 	color: #FFF;
 }
+
+/*.btn-default{
+	background-color: #18BC9C;
+	border-color: #18BC9C;
+	color: #FFFFFF;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default{
+	color: : #FFFFFF;
+	background-color: #13987E;
+	border-color: #13987E;
+}*/
+
 .container{
     position: relative;
     border-collapse: separate;
@@ -172,13 +189,13 @@ h1{
 	padding: 12px;
 }
 
-.login-triangle{
+/*.login-triangle{
 	width: 0;
 	margin-right: auto;
 	margin-left: auto;
 	border: 12px solid transparent;
 	border-bottom-color: #28d;
-}
+}*/
 
 .form-group{
 	width: 400px;

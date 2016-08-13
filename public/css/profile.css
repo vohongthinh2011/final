@@ -20,6 +20,22 @@
 	margin-top: 10px;
 }
 
+.btn-default{
+    background-color: lightgrey;
+    border-color: lightgrey;
+    color: black;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active
+/*.open .dropdown-toggle.btn-default*/{
+    color: : #FFFFFF;
+    background-color: lightgrey;
+    border-color: lightgrey;
+}
+
 
 .profile-pic{
     width: 100px;

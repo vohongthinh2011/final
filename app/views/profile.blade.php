@@ -9,12 +9,7 @@
 @stop 
 
 @section('content')
-    
-    
-    
-
-    
-    
+       
 <div class="col-xs-4 col-sm-3">
   <div class="container-fluid">
     
@@ -24,7 +19,7 @@
             <div class="uploadPic">
             {{Form::open(['action' => 'ProfileController@editProfile', 'method' => 'POST', 'files' => true])}}
             {{Form::file('picture')}}
-            {{Form::submit('submit', ['class' => 'btn btn-primary'])}}
+            {{Form::submit('submit', ['class' => 'btn btn-default'])}}
             {{Form::close()}}
             </div>
             <h5 align="center">Gender: </p>{{$user->gender}}
