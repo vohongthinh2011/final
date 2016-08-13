@@ -9,22 +9,20 @@ settings:
     colors: true
     memory_limit: 1024M
 coverage:
-    #ur of file which includes c3 router.
+    #url of file which includes c3 router.
     c3_url: 'http://127.0.0.1:8000/index-test.php/'
     enabled: true
     remote: true
     include:
         - app/*
     exclude:
-        - app/config/*
-        - app/database/*
-        - app/lang/*
-        - app/storage/*
-        - app/tests/*
+        - app/cache/*
+
 modules:
     config:
-        Db:
+         Db:
             dsn: 'mysql:host=localhost;dbname=cinemaphile'
             user: 'root'
             password: 'lij135jil'
             dump: tests/_data/dump.sql
+

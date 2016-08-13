@@ -6,15 +6,15 @@
 
 class_name: FunctionalTester
 modules:
-    enabled: [Laravel4, Filesystem, FunctionalHelper]
+    enabled: [Laravel4, Filesystem, FunctionalHelper, Db]
     config:
       Laravel4:
         cleanup: true
 
     coverage:
       remote: true
-      enabled: true
-      include:
-        - app/*
-      exclude:
-        - app/cache/*
+      #enabled: true
+      #include:
+      #  - app/*
+      #exclude:
+      #  - app/cache/*
