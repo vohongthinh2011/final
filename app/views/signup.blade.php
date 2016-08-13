@@ -36,8 +36,8 @@
 		</div>
         
         <div class="form-group signup-input-bar">
-                {{Form::radio('gender', 'male', ['class' => 'form-control'])}} Male
-                {{Form::radio('gender', 'female', ['class' => 'form-control'])}} Female
+                <label>{{Form::radio('gender', 'male', ['class' => 'form-control'])}} Male</label>
+                <label>{{Form::radio('gender', 'female', ['class' => 'form-control'])}} Female</label>
         </div>
         <div class="form-inline">
             <div class="form-group">
@@ -59,7 +59,7 @@
 		{{ Form::text('answer' , null, [ 'placeholder' => 'Verification Answer', 'class' => 'form-control', 'required']) }}
 		</div>
 		{{ Form:: submit('Sign Up', ['class' => 'btn btn-primary btn-lg btn-block signup-input-bar']) }}
-        <div class="login"><a href="/login">Go Back to Login</a></div>
+        <div class="login"><h4 align="center"><a href="/login">Go Back to Login</a></div></h4>
 	{{ Form::close()}}
 
 </div> 

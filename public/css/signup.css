@@ -237,7 +237,7 @@ body{
 
 */
 body{
-    background-color: lightgrey;
+    background-color: #0F0F0F;
 }
 
 .container{
@@ -255,6 +255,9 @@ body{
 	width: 500px;
 }
 
+h1, p, label, h4{
+	color: #FFF;
+}
 
 .fullName{
 	width: 500px;

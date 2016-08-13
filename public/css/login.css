@@ -155,9 +155,12 @@ body{
 }
 */
 body {
-  background-color: lightgray;
+  background-color: #0F0F0F;
 }
 
+h1{
+	color: #FFF;
+}
 .container{
     position: relative;
     border-collapse: separate;
