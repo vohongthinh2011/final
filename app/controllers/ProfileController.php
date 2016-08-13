@@ -4,10 +4,17 @@ class ProfileController extends \BaseController{
     
     public function showProfile(){
         $user = Auth::user();
+        $review_response = [];
+
         $user_reviews = Review::where('user_id' , '=', $user->id)->get();
+        foreach($user_reviews as $user_review){
+            $user_response[$user_review->review_id] = Reaction::where('review_id', '=', $user_review->review_id)->get();
+        }
+        
         return View::make('profile', [
             'user' => $user,
-            'reviews' => $user_reviews
+            'reviews' => $user_reviews,
+            'responses' => $user_response
             ]);
     }
     

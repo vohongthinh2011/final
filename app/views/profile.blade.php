@@ -48,12 +48,13 @@
             <h3>{{$review->movie_title}}:</h3><br>
             <blockquote>{{$review->content}} || {{$review->rating}}/10</blockquote>
             
-            <p>{{$review->content}}</p>
-                <p>{{$review->rating}}</p>
-                <p>{{$review->movie_title}}</p>
-                <p>{{$review->name}}</p>
-            
         </div>
+        @foreach($responses[$review->review_id] as $response)
+           <div class="response">
+               <p>{{$response->name}} responded at {{$response->created_at}}</p>
+               <p>{{$response->content}}</p>
+            </div>
+        @endforeach 
 
         </div>       
     @endforeach  

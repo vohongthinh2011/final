@@ -17,6 +17,14 @@ h1{
 	display: block;
 	padding: 12px;
 }
+/*
+.btn{
+	background-color: lightgrey;
+}
+
+input [type=button]{
+	background-color: lightgrey;
+}*/
 
 p{
 	color: darkgrey;

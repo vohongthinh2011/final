@@ -26,7 +26,7 @@
                 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="feed">Home<span class="sr-only"></span></a></li>
+                        <li><a href="feed">Home<span class="sr-only"></span></a></li>
                         <li><a href="profile">Profile</a></li>
                     </ul>
                     {{Form::open(['action' => 'SearchController@SearchMovieID', 'method' => 'POST', 'class' => "navbar-form navbar-left"])}}
