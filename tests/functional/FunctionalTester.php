@@ -4,7 +4,7 @@
 // You should not change it manually as it will be overwritten on next build
 // @codingStandardsIgnoreFile
 
-
+use Codeception\Module\Laravel4;
 use Codeception\Module\Filesystem;
 use Codeception\Module\FunctionalHelper;
 

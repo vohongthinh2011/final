@@ -16,15 +16,13 @@ coverage:
     include:
         - app/*
     exclude:
-        - app/config/*
-        - app/database/*
-        - app/lang/*
-        - app/storage/*
-        - app/tests/*
+        - app/cache/*
+
 modules:
     config:
-        Db:
+         Db:
             dsn: 'mysql:host=localhost;dbname=cinemaphile'
             user: 'root'
             password: 'lij135jil'
             dump: tests/_data/dump.sql
+

@@ -1,0 +1,95 @@
+$I->
+    am('user')
+    wantTo('login')
+    amGoingTo('submit user form') //describe what you're going to do at the page 
+    expect('the form to be properly submitted')
+
+
+Redirect/Veiw  Pages
+$I->
+    amOnPage('/route');
+    see('Hello');
+    
+    
+    
+Fill forms
+$I->
+    fillField('name of input field')
+    selectOption('name of radio buttons enum', 'name of button')
+    click('name of button/submit button')
+        
+
+$I->
+
+
+LOCATORS of fields/buttons/forms
+ //when a page may have multiple similar fields, id it by locators 
+ explicitly calling locators:
+    $I->click(['link' => 'Login']);
+    $I->click(['class' => 'btn', 'name' => 'james']);
+    
+  locator types: 
+    id
+    name 
+    css
+    xpath
+    link
+    class
+
+ASSERTIONS(test if you see friends list or not)
+$I->see('text')
+    dontSee('text') //if failed forms 
+    seeElement('.notice') // class element
+    dontSeeElement('#test') // id element
+    seeInCurrentUrl('/friends');
+    seeCheckboxIsChecked('#button1')
+    seeLink('Login');
+    
+CONDITIONAL ASSERTIONS (test if condition w/o stopping test)
+$I->canSeeInCurrentUrl('/user/miles');
+    canSeeCheckboxIsChecked('#agree');
+    cantSeeInField('user[name]', 'Miles');
+    
+    //failed assertion won't stop the test 
+    
+GRABBERS (grabs input from forms)
+$var = $I->grabTextFrom('#password'); //input fields 
+           grabValueFrom('input[name=api]')
+           //more grabbers 
+           
+TITLES (html)
+$I->seeInTitle('Login');
+    dontSeeInTitle('Register');
+    
+URLS
+$I->seeCurrentUrlEquals('/login');
+    seeCurrentUrlMatches('regex');
+    seeInCurrentUrl('contained in current url');
+    
+MULTI SESSION TESTING (when more than one person is on the site)
+
+$friend = $I->havFriend('name of friend');    
+    
+
+
+USING OTHER MODULES
+    1) config in universal .yml or in functiona.suite.yml, etc
+        modules:
+            config:
+                Db:
+                    dsn: 'mysql:host=localhost;dbname=cinemaphile'
+                    user: 'root'
+                    password: 'lij135jil'
+                    dump: tests/_data/dump.sql
+
+CREATING YOUR OWN MODULES
+<?php 
+    namespace NAMEOFMODULE
+    
+    class Functional extends \Codeception\Module
+    {
+    }
+    
+creating own assertion functions: must prefix with 'see' or 'dontSee'
+//now every module function can be called 
+

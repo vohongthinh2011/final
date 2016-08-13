@@ -33,10 +33,7 @@ class AuthenticationController extends \BaseController {
         Auth::logout();
         return Redirect::to('/login');
 	}
-	public function showUsers(){
-		$users = User::all();
-		return $users->toJson();
-	}
+	
 
 
 

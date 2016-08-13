@@ -60,7 +60,6 @@ class RegistrationController extends \BaseController {
   			 Session::flash('error_message', 'Oops! Something is wrong!');
   			return Redirect::back()->withInput();
   		}
-  		Session::flash('success_message', 'Success! Welcome to Our Facbook');
   		return Redirect::to('/login');
     }
 }
