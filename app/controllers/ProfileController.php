@@ -29,8 +29,13 @@ class ProfileController extends \BaseController{
             $user->profile_pic = $filename;
             $user->save();
        }
+       $user_response = [];
+       foreach($user_reviews as $user_review){
+            $user_response[$user_review->review_id] = Reaction::where('review_id', '=', $user_review->review_id)->get();
+        }
        return View::make('profile', ['user' => $user,
-        'reviews' => $user_reviews]);
+        'reviews' => $user_reviews,
+        'responses' => $user_response]);
    }
     
     
