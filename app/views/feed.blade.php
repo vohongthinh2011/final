@@ -49,15 +49,17 @@
            
             {{Form::submit('Respond', ['class' => 'btn btn-default'])}}
             {{Form::close()}}
-            
-        </div>
-        </div>
-        @foreach($responses[$review->review_id] as $response)
+            @foreach($responses[$review->review_id] as $response)
            <div class="response">
                <p>{{$response->name}} responded at {{$response->created_at}}</p>
                <p>{{$response->content}}</p>
             </div>
         @endforeach 
+            
+        </div>
+
+        </div>
+        
         
                
     @endforeach  

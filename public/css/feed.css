@@ -54,11 +54,11 @@
 }
 
 .review-box{
-    border-color: dimgrey;
+    border-color: #dfdfdf;
     border-width: 5px;
 }
 .response{
     margin: 10px 0px 10px 0px;
-	background: #f8f8f8;
+	background: #dfdfdf;
 	padding: 10px 10px 10px 10px;	
 }

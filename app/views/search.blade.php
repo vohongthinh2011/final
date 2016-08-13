@@ -82,28 +82,35 @@
                             {{Form::hidden('movietitle', $movie_results[$i]['original_title'])}}
                             {{Form::submit('Post', ['class' => 'btn btn-primary btn-lg'])}}
                             {{Form::close()}}
-                            @foreach($movie_reviews as $review)                            
+                            @foreach($movie_reviews as $review)
+                            <div class="panel-default">                           
                                 @if($review->movie_id == $movie_results[$i]['id'])
-                                <div class="review">
+                                <div class="panel-heading">
                                     <img src="/images/{{$review->profile_pic}}" class="profile-pic">                                                       
-                                    {{ $review->name }} said {{ $review->content }} on {{ $review->created_at }}
+                                    <h3 class="panel-title">{{$review->name}} posted a review on {{$review->created_at}}</h3>
+                                    {{$review->content}}
                                 </div>
-                                        @foreach($movie_review_reactions as $reaction)                                        
+                                    <div class="panel-content">
+                                               
+                                        @foreach($movie_review_reactions as $reaction) 
+
                                             @if($reaction->review_id == $review->review_id)                                            
                                             <div class="response">
                                             <img src="/images/{{$review->profile_pic}}" class="profile-pic">                                            
                                             {{ $reaction->name }} responded with {{ $reaction->content}} on {{ $reaction->created_at}}
                                             </div>                                                                                
-                                            @endif                                            
-                                        @endforeach                                         
+                                            @endif
+                                                                               
+                                        @endforeach   
+                                        </div>                                       
                                         {{Form::open(['action' => 'ReactionController@postReaction', 'class' => 'form', 'method' => 'POST'])}}
                                             
-                                            <h6>Join in on the conversation!</h6>
+                                            <h6></h6>
                                             
-                                            <span class="form-group">                                            
-                                            <textarea name="content"></textarea>
+                                            <div class="form-group">                                            
+                                            <textarea name="content">Join in on the conversation!</textarea>
                                             
-                                            </span>
+                                            </div>
                                             <span>
                                             {{Form::hidden('reviewid', $review->review_id)}}
            
@@ -113,7 +120,7 @@
                                             
                                             {{Form::close()}}                               
                                 @endif
-                                
+                            </div> 
                             @endforeach
                         </div>
                     </div>

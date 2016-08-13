@@ -66,3 +66,19 @@ body{
     
 }
 
+.panel-content{
+    padding: 10px;
+}
+
+.panel{
+    border-color: dimgray
+}
+
+.panel > .panel-heading{
+    background-image: none;
+    background-color: dimgray;
+    color: white;
+}
+
+
+

@@ -14,6 +14,8 @@
     {{Form::open(['action' => 'ProfileController@editProfile', 'method' => 'POST', 'files' => true])}}
     {{Form::file('picture')}}
     {{Form::submit('submit', ['class' => 'btn btn-primary'])}}
+    {{Form::close()}}
+
     <p>Date of Birth: </p>{{ $user->date_of_birth }}
     @foreach($reviews as $review)
         <p>{{$review->content}}</p>
@@ -21,8 +23,7 @@
         <p>{{$review->movie_title}}</p>
         <p>{{$review->name}}</p>
     @endforeach
-    {{Form::close()}}
-
+    
 
 
 
