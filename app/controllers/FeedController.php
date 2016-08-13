@@ -11,10 +11,10 @@ class FeedController extends \BaseController {
 		$user = Auth::user();
         
         //run default profile pic if picture was deleted
-        if(!file_exists('public/images/'.$user->profile_pic)){
-            $user->profile_pic = 'default_picture.jpg';
-            $user->save();
-        }
+        // if(!file_exists('public/images/'.$user->profile_pic)){
+        //     $user->profile_pic = 'default_picture.jpg';
+        //     $user->save();
+        // }
         
         //get network of user and friends
         $friends1 = $user->friendsUserRequested;
